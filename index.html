@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>phd-presentation</title>
+
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+
+
+	</head>
+	<body class="reveal-viewport theme-font-palatino theme-color-grey-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section class="title" data-background="images/tokyo.gif" data-id="6351fd2871e1ea08dfb127190f778ba8" data-background-image="images/tokyo.gif"><div class="sl-block" data-block-type="text" data-name="text-5316f5" data-block-id="fb539f21b52a276986473451b08acd44" style="height: auto; width: 960px; left: 0px; top: 104.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" dir="ui" style="z-index: 10;">
+<h4><span style="font-size:1.2em;">Adaptive Methods for Optimisation in Stochastic Environments</span></h4>
+
+<p> </p>
+
+<p class="authors"><medium><a href="https://xuedong.github.io/about/" target="_blank">Xuedong Shang</a></medium></p>
+
+<p class="authors"><small>Inria Lille, SequeL Team</small></p>
+
+<p class="authors">Wednesday, September 29<sup>th</sup>, 2021</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-961e6d" data-block-id="5bb00b2824087147f6c7d991a66f3266" style="width: 185.844px; height: 62.2321px; left: 157.976px; top: 420px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="654" data-natural-height="219" data-lazy-loaded="" data-src="phd-presentation/efe2db1bede0ade075326a74eb00ea3e.png"></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-2915b2" data-block-id="39b8c08e46209c766986df59af674ca0" style="width: 211.664px; height: 62.2321px; left: 343.82px; top: 420px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="568" data-natural-height="167" data-lazy-loaded="" data-src="phd-presentation/7c87a06726ae4461faaf8072e51bb70c.png"></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-3f033e" data-block-id="876cca6a8d8069867c99afbf9a2c2529" style="width: 62.2321px; height: 62.2321px; left: 555.484px; top: 420px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="709" data-natural-height="709" data-lazy-loaded="" data-src="phd-presentation/2c6d84466e929004c9dc2cdb1d63a78c.png"></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-63b4dc" data-block-id="a4af183037c12fc3fb17b01594082562" style="width: 182.308px; height: 62.2321px; left: 619.716px; top: 420px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 14;" data-inline-svg="false"><img style="" data-natural-width="914" data-natural-height="312" data-lazy-loaded="" data-src="phd-presentation/11988e3353ad0138f8cb42731d6669c9.svg"></div></div>
+</section><section data-id="eabe9668617a232801681ea6563cd3f4" class="stack"><section data-id="1160bd910778a60887651ed3da0fb126"><div class="sl-block" data-block-type="text" data-name="text-055a02" data-block-id="ae48659845c9669e6fa0065f2fc817c8" style="height: auto; width: 960px; left: 0px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="">
+<header>
+<h2>Introduction</h2>
+</header>
+</div></div></section><section data-id="283540f12a90482f0d24c39dac56a703"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="75b4846b9a5b70962258ad3f3ef8e297"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3>Sequential optimisation in a stochastic environment</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-e53a27" data-block-id="65a0983abf9f365c88de1dbf133a5c1f" style="height: auto; width: 600px; left: 180px; top: 330.5px;"><div class="sl-block-content fragment current-visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-fragment-index="0">
+<p>We aim to maximise a target function</p>
+</div></div>
+<div class="sl-block" data-block-type="math" data-name="math-138c4a" data-block-id="dec6464902a09fb857220b9b2a8967e7" style="width: auto; height: auto; left: 303px; top: 420.5px;"><div class="sl-block-content notranslate fragment current-visible" style="z-index: 12;" data-fragment-index="0"><div class="math-input">\argmax_{x\in\mathcal{X}} f(x)</div></div></div>
+<div class="sl-block" data-block-type="math" data-name="math-eb9273" data-block-id="30510918294f158afd9882dac9176645" style="width: auto; height: auto; left: 400.5px; top: 369.5px;"><div class="sl-block-content notranslate fragment current-visible" style="z-index: 13; font-size: 70%;" data-fragment-index="0"><div class="math-input">f:\textcolor{red}{\mathcal{X}}\rightarrow\mathbb{R}</div></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-fc3cf0" data-block-id="e6baa38227bde78429ed31b66307bbd3" style="height: auto; width: 600px; left: 180px; top: 330.5px;"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-fragment-index="1">
+<p>based on a sequence of function values...</p>
+</div></div></section><section data-id="61df6a4ad2396052775272ff78a94cf1"><div class="sl-block" data-block-type="text" data-name="text-e5fe78" data-block-id="0ef1e4986be08eab217e491b970d777f" style="height: auto; width: 600px; left: 180px; top: 98.9664px;">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+        <h3>Use cases</h3>
+    </div>
+</div>
+<div class="sl-block" data-block-type="image" data-name="image-0e5a43" data-block-id="ffecaa4e9d34033b128f5bda7c48a0c9" style="width: 806.4px; height: 293.461px; left: 76.8px; top: 219.915px; min-width: 1px; min-height: 1px;">
+    <div class="sl-block-content fragment current-visible" style="z-index: 11;" data-fragment-index="0"><img style="" data-natural-width="1962" data-natural-height="714" data-lazy-loaded="" data-src="phd-presentation/02bd0a859fbfcd7b751d6b607cade409.png"></div>
+</div>
+<div class="sl-block" data-block-type="text" data-name="text-f1d24e" data-block-id="b4ee42f5d56d5d0ececdb21b066f790b" style="height: auto; width: 600px; left: 180px; top: 521px;">
+    <div class="sl-block-content fragment current-visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="0">
+        <p><span style="font-size:0.7em">A/B/C Testing</span></p>
+
+        <p><span style="font-size:0.7em">(Source: Julie Paci)</span></p>
+    </div>
+</div>
+<div class="sl-block" data-block-type="image" data-name="image-ab9401" data-block-id="1af1f48729e6ec714d0d19aaf28e605b" style="width: 621.881px; height: 347.822px; left: 169.06px; top: 176.089px; min-width: 1px; min-height: 1px;">
+    <div class="sl-block-content fragment current-visible" style="z-index: 13;" data-fragment-index="1"><img style="" data-natural-width="1037" data-natural-height="580" data-lazy-loaded="" data-src="phd-presentation/2adf7d80d866f2957b2ad0c71a0ace00.png"></div>
+</div>
+<div class="sl-block" data-block-type="text" data-name="text-dcc6b6" data-block-id="222af2dbe5270cda2b7de45ff7ff932f" style="height: auto; width: 600px; left: 180px; top: 523.911px;">
+    <div class="sl-block-content fragment current-visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-fragment-index="1">
+        <p><span style="font-size:0.7em">Design of clinical trials</span></p>
+
+        <p><span style="font-size:0.7em">(Source: cbinsights.com)</span></p>
+    </div>
+</div>
+<div class="sl-block" data-block-type="image" data-name="image-e53d86" data-block-id="a75e8e400a42127c2defaffe81ec7de2" style="width: 806.4px; height: 301.5px; left: 76.8px; top: 199.25px; min-width: 1px; min-height: 1px;">
+    <div class="sl-block-content fragment" style="z-index: 15;" data-fragment-index="2"><img style="" data-natural-width="1792" data-natural-height="670" data-lazy-loaded="" data-src="phd-presentation/7593a865188c75c962368b88be17ccc9.png"></div>
+</div>
+<div class="sl-block" data-block-type="text" data-name="text-2d6008" data-block-id="f2b8fc6f2951dc00b3f493a49e6c5c47" style="height: auto; width: 600px; left: 190.941px; top: 521px;">
+    <div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;" data-fragment-index="2">
+        <p><span style="font-size:0.7em">Hyper-parameter optimization (HPO)</span></p>
+
+        <p><span style="font-size:0.7em">(Source: Ramraj Chandradevan)</span></p>
+    </div>
+</div></section><section data-id="8c263bc926b37ec049adaa4ba022d580"><div class="sl-block" data-block-type="text" data-name="text-07d842" data-block-id="6ae864efc24145b711b897de7bc005fd" style="height: auto; width: 959px; left: 1.122px; top: 165px;">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+<header>
+<h3>Multi-armed bandits</h3>
+</header>
+</div>
+</div>
+
+<div class="sl-block" data-block-type="math" data-name="math-b69162" data-block-id="141a6535a99bf121eb52a80dd0d75c89" style="width: auto; height: auto; left: 190.122px; top: 313.5px;"><div class="sl-block-content notranslate fragment current-visible" style="z-index: 11;" data-fragment-index="0"><div class="math-input">\nu_1: \mu_1, \nu_2: \mu_2, \cdots, \nu_K: \mu_K</div></div></div>
+
+<div class="sl-block" data-block-type="text" data-name="text-d06bbe" data-block-id="cc2ee0312dbb3ce26eb7056d27c49215" style="height: auto; width: 600px; left: 180.622px; top: 386.5px;"><div class="sl-block-content fragment current-visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="0">
+<p>A bandit model is denoted by <strong>\(\mu\)</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-a1fcc6" data-block-id="0775adc00fbbfd7a9fa5b5598da5eeb3" style="height: auto; width: 742px; left: 109.622px; top: 322.5px;"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-fragment-index="1">
+<p style="text-align:left">Learning protocol: at each round \(t\), choose an arm \(I_t\) to play and observes a stochastic/noisy reward \(r_{I_t}\sim\nu_{I_t}\) that follows the corresponding underlying distribution.</p>
+</div></div></section><section data-id="8a976ddaf9e9732f6acabe5baa482201"><div class="sl-block" data-block-type="text" data-name="text-d4f418" data-block-id="8aa01c4320f4036f407def092db2cf8a" style="height: auto; width: 983.304px; left: -11.652px; top: 187px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="">
+<header>
+<h3>Learning goals</h3>
+</header>
+
+<p> </p>
+
+<ul>
+	<li class="fragment fade-in-then-semi-out" data-fragment-index="0">Reward <span class="green">maximisation</span>: trade-off between exploration and exploitation</li>
+	<li class="fragment" data-fragment-index="1">Best-arm identification (BAI):
+	<ol style="list-style-type: none;">
+		<li class="fragment fade-in-then-out" data-fragment-index="2">
+		<p>$$\mu^\star = \textcolor{red}{\max}_i \mu_i$$</p>
+
+		<p>$$I^\star = \textcolor{red}{\operatorname{arg\,max}}_i \mu_i$$</p>
+		</li>
+	</ol>
+	</li>
+</ul>
+
+<p> </p>
+</div></div></section><section data-id="fef7f8b3cf09da502c3ed44364ad198c"><div class="sl-block" data-block-type="text" data-name="text-7be3ed" data-block-id="a1d9ca3d1977a7f5844db35d6a9ed7df" style="height: auto; width: 960px; left: 0px; top: 157.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="">
+<header>
+<h3>Outline</h3>
+</header>
+
+<ul>
+	<li class="fragment" data-fragment-index="0">Part 1: Finite Search Space
+	<ul>
+		<li class="fragment fade-in-then-semi-out" data-fragment-index="0">Bayesian best-arm identification</li>
+		<li class="fragment fade-in-then-semi-out" data-fragment-index="1">Extensions to the linear case</li>
+	</ul>
+	</li>
+	<li class="fragment" data-fragment-index="2">Part 2: Infinite or Continuous Search Space
+	<ul>
+		<li class="fragment" data-fragment-index="3">Apply Bayesian algorithms to HPO</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section></section><section data-id="de7f249d6f2a23dbf9a591a08ff652b4" class="stack"><section id="bai" data-id="2683ada05a8fed9a9b3d338f243e1dc1" data-background-color="rgb(212, 107, 86)"><div class="sl-block" data-block-type="text" data-name="text-3c757f" data-block-id="f5f64be020cb1f4690ef6a25991e41a4" style="height: auto; width: 960px; left: -1px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="">
+<h2>Part 1: Finite Search Space</h2>
+</div></div></section><section data-background-color="rgb(212, 107, 86)" data-id="72ac73882676a2c12976cc12a076a1d9"><div class="sl-block" data-block-type="text" data-name="text-3c757f" style="height: auto; width: 960px; left: -1px; top: 280px;" data-block-id="d2117c00065bf0e43c6e1ca44b2cbe80"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+<h2>Bayesian Best-Arm Identification</h2>
+</div></div></section><section data-id="be8c44c5eaedab1e3e1b49792554267f" data-background-color="rgb(212, 107, 86)"><div class="sl-block" data-block-type="text" data-name="text-5fe758" data-block-id="14785138e4acf2e961912b30c17a5823" style="height: auto; width: 960px; left: 0px; top: 96.7216px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+<header>
+<p>Formally, a BAI algorithm is composed of:</p>
+</header>
+
+<ul>
+	<li class="fragment" data-fragment-index="0">a sampling rule \(\hat{I}\)</li>
+	<li class="fragment" data-fragment-index="1">a stopping rule \(\tau\)
+	<ol>
+		<li class="fragment fade-in-then-semi-out" data-fragment-index="2">
+<span class="green">fixed-budget</span>: stops when reach the budget \(\tau = n\) <strong>(Audibert and Bubeck, 2010; Gabillon et al., 2013; Karnin et al., 2013)</strong>
+</li>
+		<li class="fragment" data-fragment-index="3">
+<span class="red">fixed-confidence</span>: stops when the probability of outputting a wrong arm is less than \(\delta\), minimize \(\mathbb{E}[\tau_\delta]\) <strong>(Even-Dar et al., 2003; Kalyanakrishnan et al., 2013; Jamieson et al., 2014; Garivier and Kaufmann 2016, Qin et al., 2017)</strong>
+</li>
+	</ol>
+	</li>
+	<li class="fragment" data-fragment-index="4">a decision rule
+	<ol>
+		<li class="fragment" data-fragment-index="5">outputs a guess \(J_\tau\) of the best arm \(I^\star\) when the algorithm stops</li>
+	</ol>
+	</li>
+</ul>
+</div></div></section><section data-id="68c4c686b1cfe27e0f9733dcde018c56" data-background-color="rgb(212, 107, 86)"><div class="sl-block" data-block-type="text" data-name="text-355947" data-block-id="6fc6e0f780e9b26aa401d8b8262a403e" style="height: auto; width: 960px; left: 0px; top: 311px;"><div class="sl-block-content fragment current-visible" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;" data-fragment-index="0">
+<div class="r-stack">
+<p class="fade-in-then-out visible"><span style="font-size:1.0em;">We are interested in <u>T</u>op-<u>T</u>wo <u>T</u>hompson <u>S</u>ampling <strong>(Russo, 2016)</strong></span></p>
+
+<p class="fade-in-then-out visible"><span style="font-size:1.0em;">​</span></p>
+</div>
+</div></div>
+<div class="sl-block" data-block-type="math" data-name="math-279efd" data-block-id="8db30ca0e50aabcee9bb1d74a70fa14f" style="width: auto; height: auto; left: 209.523px; top: 226.559px;"><div class="sl-block-content notranslate fragment current-visible" style="z-index: 11; font-size: 90%;" data-fragment-index="3"><div class="math-input">\pi_n(\mu') = \frac{\pi_1(\mu')L_{n-1}(\mu')}{\int_{\Theta}\pi_1(\mu'')L_{n-1}(\mu'')d\mu''}\\
+where\\
+L_{n-1}(\mu') = \Pi_{l=1}^{n-1}p(Y_{l,I_l}|\mu'_{I_l})
+</div></div></div>
+<div class="sl-block" data-block-type="math" data-name="math-b855a5" data-block-id="2730326648def757f40a307e9ce58c68" style="width: auto; height: auto; left: 229px; top: 303.025px;"><div class="sl-block-content notranslate fragment current-visible" style="z-index: 12; font-size: 90%;" data-fragment-index="2"><div class="math-input">(Y_{1,I_1},\cdots,Y_{n-1,I_{n-1}}) → \Pi_n</div></div></div>
+<div class="sl-block" data-block-type="math" data-name="math-75c0bb" data-block-id="ffa2c370a8f2c8f05d5b0e803291dfa3" style="width: auto; height: auto; left: 118.5px; top: 297.559px;"><div class="sl-block-content notranslate fragment current-visible" style="z-index: 13; font-size: 90%;" data-fragment-index="1"><div class="math-input">\text{A prior distribution } \Pi_1 \text{ over } \Theta, \mu\in\Theta</div></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-23d59c" data-block-id="69ac6f6af1dd5de6edc9b4823337a713" style="width: 806.399px; height: 394.036px; left: 77.3005px; top: 152.982px; min-width: 1px; min-height: 1px;"><div class="sl-block-content fragment" style="z-index: 14;" data-fragment-index="4"><img style="" data-natural-width="1408" data-natural-height="688" data-lazy-loaded="" data-src="phd-presentation/c7441b3dd57ecfaa7ea9881cf9228e65.png"></div></div></section><section data-id="1bcd2298fc520e0ba52e52726852f2eb" data-background-color="rgb(212, 107, 86)"><div class="sl-block" data-block-type="text" data-name="text-f0afad" data-block-id="4782b7e9544ff509830612cd284665c3" style="height: auto; width: 960px; left: 0px; top: 167.644px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+<header>
+<p>Why?</p>
+</header>
+
+<ul>
+	<li class="fragment" data-fragment-index="0">Anytime BAI algorithm: does not depend on \(n\) or \(\delta\) <strong>(Jun and Nowak, 2016)</strong>
+</li>
+	<li class="fragment" data-fragment-index="1">A Bayesian competitor for BAI as Thompson sampling to <span class="green">UCB</span> for regret minimizing?
+	<ol>
+		<li class="fragment" data-fragment-index="3">Strong practical performance?</li>
+		<li class="fragment" data-fragment-index="2">Does not need to calibrate 'conservative' confidence regions</li>
+	</ol>
+	</li>
+</ul>
+</div></div></section><section data-id="28d76a8d8d3e6a60914d529e76ce5627" data-background-color="rgb(212, 107, 86)"><div class="sl-block" data-block-type="text" data-name="text-6668a9" data-block-id="d7172c9e0544583175531102dc378f26" style="height: auto; width: 884px; left: 38px; top: 175.897px;">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+<header>
+<p>What is known about TTTS... (posterior convergence)</p>
+</header>
+
+<div class="r-stack">
+<p class="theorem fragment" data-fragment-index="0" style="text-align: left;"><strong>Theorem (Russo, 2016)</strong> Under TTTS and under the some boundedness assumptions on the prior and the parameter space, it holds a.s. \[ \lim_{n\rightarrow{\infty}} -\frac{1}{n}\log(1-\alpha_{n,I^\star}) = \textcolor{lightskyblue}{\frac{1}{T_{\beta}^\star(\boldsymbol{\mu})}}, \] where \[ \quad \alpha_{n,i} \triangleq \Pi_{n}(\theta_i \gt \max_{j\neq i}\theta_j). \]</p>
+</div>
+</div>
+</div></section><section data-id="7a4bd4694d87886080c25180a5897940" data-background-color="rgb(212, 107, 86)"><div class="sl-block" data-block-type="text" data-name="text-b83d23" data-block-id="afb2076d9fc9f9fe1d8f806100a83fb5" style="height: auto; width: 960px; left: 0px; top: 163px;">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="">
+<header>
+<p>What is known about TTTS... (characteristic time)</p>
+</header>
+
+<div class="r-stack">
+<p class="theorem fragment fade-in-then-out" data-fragment-index="0" style="text-align: left;"><strong>Definition</strong> Let \(\Sigma_K = \{\omega : \sum_{k=1}^K \omega_k = 1, \omega_k \geq 0\}\) and define for all \(i\neq I^\star\) \[ C_i(\omega,\omega') \triangleq \min_{x\in\mathcal{I}} \omega d(\mu_{I^\star};x) + \omega' d(\mu_i;x), \] where \(d(\mu,\mu')\) is the KL-divergence. We define \[ \textcolor{lightskyblue}{T_{\beta}^\star(\boldsymbol{\mu})^{-1}} \triangleq \max_{\substack{\omega \in \Sigma_K\\\omega_{I^\star}=\beta}}\min_{i\neq I^\star} C_i(\omega_{I^\star},\omega_i). \]</p>
+
+<p class="fragment" data-fragment-index="1"><span class="red">In particular, for Gaussian bandits...</span> \[ \textcolor{lightskyblue}{T_{\beta}^\star(\boldsymbol{\mu})^{-1}} = \max_{\omega:\omega_{I^\star}=\beta}\min_{i\neq I^\star} \frac{(\mu_{I^\star}-\mu_i)^2}{2\sigma^2(1/\omega_i+1/\beta)}. \]</p>
+</div>
+</div>
+</div></section><section data-id="1cd2cf83ac501daa1fe4a06ef13d7c6c" data-background-color="rgb(212, 107, 86)"><div class="sl-block" data-block-type="text" data-name="text-78630d" data-block-id="175f9106c49dae308bdeb1db95d8bf4f" style="height: auto; width: 913.393px; left: 23.3035px; top: 141px;">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="">
+<header>
+<p>Limitations of TTTS</p>
+</header>
+
+<ul>
+	<li class="fragment" data-fragment-index="0">Existing guarantees do not apply to standard choices of conjugate priors. <strong>(AISTATS 20)</strong>
+</li>
+	<li class="fragment" data-fragment-index="1">What can we say about the sample complexity in the fixed-confidence setting?</li>
+	<li class="fragment fade-in-then-semi-out" data-fragment-index="2">Can we have finite-time guarantees?</li>
+</ul>
+
+<p class="fragment fade-in-then-semi-out" data-fragment-index="3"> </p>
+</div>
+</div></section><section id="ttts" data-id="a5206b66f8630fd4d01e84b691bf0a18" data-background-color="rgb(212, 107, 86)"><div class="sl-block" data-block-type="text" data-name="text-63db1d" data-block-id="07a142eed64ee302ce7702fe6702ff11" style="height: auto; width: 960px; left: 0px; top: 237.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="">
+<h2>Bayesian Best-Arm Identification</h2>
+
+<p> </p>
+
+<p> </p>
+
+<ol>
+	<li>Theoretical insights</li>
+</ol>
+
+<p> </p>
+</div></div></section><section data-id="f9de72138260a61ce039c1066d1c4160" data-background-color="rgb(212, 107, 86)"><div class="sl-block" data-block-type="text" data-name="text-92735d" data-block-id="1780156e2842a0f8740dae30ba7f80e6" style="height: auto; width: 960px; left: 0px; top: 127px;">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="">
+<header>
+<h3>Main results</h3>
+</header>
+
+<p>Sample complexity</p>
+
+<p class="theorem fragment" data-fragment-index="0" style="text-align: left;"><strong>Theorem 3 (AISTATS 20)</strong> The TTTS sampling rule coupled with the Chernoff stopping rule form a \(\delta\)-correct BAI strategy. If all arm means are distinct, \[ \limsup_{\delta\rightarrow{0}} \frac{\mathbb{E}[\tau_{\delta}]}{\log(1/\delta)} \leq \textcolor{lightskyblue}{T_{\beta}^\star(\boldsymbol{\mu})}. \]</p>
+
+<p class="theorem fragment" data-fragment-index="1">Lower bound <strong>(Garivier and Kaufmann, 2016)</strong>: \[\liminf_{\delta \rightarrow 0}\frac{\mathbb{E}[\tau_\delta]}{\log(1/\delta)} \geq \textcolor{lightskyblue}{T_{\beta}^\star(\boldsymbol{\mu})}.\]</p>
+</div>
+</div></section><section data-id="83080b4fe873e453b55d191055327c5c" data-background-color="rgb(212, 107, 86)"><div class="sl-block" data-block-type="text" data-name="text-3d74ff" data-block-id="30bd01e0864c563bb90d1d76bbf6ed96" style="height: auto; width: 880px; left: 40px; top: 79.9873px;">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="">
+        <header>
+            <h3>Proof sketch</h3>
+        </header>
+
+        <p>\(\delta\)-correctness</p>
+
+        <p class="theorem fragment" data-fragment-index="0">Stopping rule: \[ \tau_\delta^{\text{Ch.}} \triangleq \inf \left\lbrace n \in \mathbb{N} : \max_{i \in \mathcal{A}} \min_{j \in \mathcal{A} \setminus \{i\} } \textcolor{lightskyblue}{W_{n}(i,j)} \gt d_{n,\delta} \right\rbrace. \]</p>
+
+        <div class="r-stack">
+            <p class="theorem fragment fade-in-then-out" data-fragment-index="1"><strong>Transportation cost</strong>: \(\mu_{n,i,j} \triangleq (T_{n,i}\mu_{n,i} +T_{n,j}\mu_{n,j})/(T_{n,i}+T_{n,j})\), then we define \[ \color{lightskyblue}{W_n(i,j)} ≜ \left\{ \begin{array}{ll} 0 &amp; \operatorname{if} \mu_{n,j} \geq \mu_{n,i},\\ W_{n,i,j}+W_{n,j,i} &amp; \operatorname{otherwise}, \end{array}\right. \] where \(W_{n,i,j} \triangleq T_{n,i} d\left(\mu_{n,i},\mu_{n,i,j}\right)\) for any \(i,j\).</p>
+
+            <p class="theorem fragment fade-in-then-out" data-fragment-index="2"><span class="red">In particular, for Gaussian bandits</span>: \[ \color{lightskyblue}{W_n(i,j)} = \dfrac{(\mu_{n,i}-\mu_{n,j})^2}{2\sigma^2(1/T_{n,i}+1/T_{n,j})}\mathbb{1}\{\mu_{n,j}&lt;\mu_{n,i}\}. \]</p>
+
+            <p class="theorem fragment fade-in-then-out" data-fragment-index="3" style="text-align: left;"><strong>Theorem (AISTATS 20)</strong> The TTTS sampling rule coupled with the Chernoff stopping rule with a threshold \(d_{n,\delta} \simeq \log(1/\delta) + c\log(\log(n))\) and the recommendation rule \(J_t = \operatorname{arg\,max}_i \mu_{n,i}\), form a \(\delta\)-correct BAI strategy.</p>
+
+            <p class="theorem fragment fade-in-then-semi-out" data-fragment-index="4">Bayesian stopping rule: \[\tau_{\delta} ≜ \inf \left\{ n\in\mathbb{N}:\max_{i\in\mathcal{A}} \textcolor{limegreen}{\alpha_{n,i}} \geq c_{n,\delta} \right\}\,.\]</p>
+
+            <p class="fragment" data-fragment-index="5"> </p>
+        </div>
+    </div>
+</div></section><section data-id="4ab6c215a6f59a1e1d5929fbc38728f3" data-background-color="rgb(212, 107, 86)"><div class="sl-block" data-block-type="text" data-name="text-8e77d4" data-block-id="03e786dd0ca335fc9ed041fd5e5d50ba" style="height: auto; width: 912.283px; left: 23.8585px; top: 93.5px;">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="">
+<header>
+<h3>Proof sketch</h3>
+</header>
+
+<p>Sufficient condition for \(\beta\)-optimality</p>
+
+<p class="theorem fragment" data-fragment-index="0" style="text-align: left;"><strong>Lemma (AISTATS 20)</strong> Let \(\delta,\beta\in (0,1)\). For any sampling rule which satisfies \(\mathbb{E}[\textcolor{lightskyblue}{T_{\beta}^\epsilon}] \lt \infty\) for all \(\epsilon \gt 0\), we have \[ \limsup_{\delta\rightarrow{0}} \frac{\mathbb{E}[\tau_{\delta}]}{\log(1/\delta)} \leq T_{\beta}^\star(\boldsymbol{\mu}), \] if the sampling rule is coupled with the Chernoff stopping rule.</p>
+
+<p class="fragment" data-fragment-index="1">\(\textcolor{lightskyblue}{T_{\beta}^\epsilon} \triangleq \inf \left\{ N\in\mathbb{N}: \max_{i\in\mathcal{A}} \vert T_{n,i}/n-\omega_i^\beta \vert \leq \epsilon, \forall n \geq N \right\}\).</p>
+</div>
+</div></section><section data-id="4f3aaf36d443bec536f52baef0504021" data-background-color="rgb(212, 107, 86)"><div class="sl-block" data-block-type="text" data-name="text-78985c" data-block-id="c3dc06830d55c4559e7ea931455fc932" style="height: auto; width: 935.587px; left: 12.2065px; top: 194px;">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="">
+<header>
+<h3>Proof sketch</h3>
+</header>
+
+<p>Core theorem</p>
+
+<p class="theorem fragment" data-fragment-index="0" style="text-align: left;"><strong>Theorem (AISTATS 20)</strong> Under TTTS, \(\mathbb{E}[\textcolor{lightskyblue}{T_{\beta}^\epsilon}] \lt +\infty\).</p>
+</div>
+</div></section><section id="t3c" data-id="1e45db6491f7caeec5268b1c0e274b20" data-background-color="rgb(212, 107, 86)"><div class="sl-block" data-block-type="text" data-name="text-b9699f" data-block-id="e0fe7d021abcb76b5f568fc1b73e2527" style="height: auto; width: 960px; left: 0px; top: 237.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="">
+					<h2>Bayesian Best-Arm Identification</h2>
+<br>
+					<h4><ol start="2"><li>Computational improvement</li></ol></h4>
+					<br>
+				</div></div></section><section data-id="ab503969625ad71e9b5219448dd8c7e8" data-background-color="rgb(212, 107, 86)"><div class="sl-block" data-block-type="text" data-name="text-11c889" data-block-id="8046979a1dc7370674e0b7454ac3eb9c" style="height: auto; width: 960px; left: 0px; top: 101px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+<p>TTTS</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-4d5cbf" data-block-id="af2d3ecd8384f1aa2b3bfcbd3759cc5b" style="width: 806.399px; height: 394.036px; left: 76.8005px; top: 153.982px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1408" data-natural-height="688" data-lazy-loaded="" data-src="phd-presentation/c7441b3dd57ecfaa7ea9881cf9228e65.png"></div></div></section><section data-id="228a2639b79b35c4ce288f399a93be9f" data-background-color="rgb(212, 107, 86)"><div class="sl-block" data-block-type="text" data-name="text-a70562" data-block-id="c1dddde83cd95a5f6aea8e010c3ce87f" style="height: auto; width: 960px; left: 0px; top: 151.642px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+<p>T3C (Top-Two Transportation Cost)</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-ee678b" data-block-id="56b2e45b5112bb42093e08684e3aa028" style="width: 806.4px; height: 353.302px; left: 76.8px; top: 210px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1406" data-natural-height="616" data-lazy-loaded="" data-src="phd-presentation/422f3c81d514511a5e558b3924d19902.png"></div></div></section><section data-id="960324392b836296fa1d1a7ba3d7a7f5" data-background-color="rgb(212, 107, 86)"><div class="sl-block" data-block-type="text" data-name="text-d2de88" data-block-id="a8506af44b4286d8248f6daaf21405f3" style="height: auto; width: 905.625px; left: 27.1875px; top: 203.939px;">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="">
+<header>
+<h3>Main results</h3>
+</header>
+
+<p>Sample complexity</p>
+
+<p class="theorem fragment" data-fragment-index="0" style="text-align: left;"><strong>Theorem (AISTATS 20)</strong> The T3C sampling rule coupled with the Chernoff stopping rule form a \(\delta\)-correct BAI strategy. If all arm means are distinct, \[ \limsup_{\delta\rightarrow{0}} \frac{\mathbb{E}[\tau_{\delta}]}{\log(1/\delta)} \leq \textcolor{lightskyblue}{T_{\beta}^\star(\boldsymbol{\mu})}. \]</p>
+</div>
+</div></section><section data-id="083b9ace1ea79c4a4c151d02408d23f5" data-background-color="rgb(212, 107, 86)"><div class="sl-block" data-block-type="text" data-name="text-ed6006" data-block-id="33668c085007d2bac47a8bb92c6e6397" style="height: auto; width: 960px; left: 0px; top: 206.5px;">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="">
+        <header>
+            <h3>Illustrations</h3>
+        </header>
+
+        <p>Time consumption</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Sampling rule</th>
+                    <th>T3C</th>
+                    <th>TTTS</th>
+                    <th>Uniform</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Exec. time (s)</td>
+                    <td><span class="fragment highlight-blue" data-fragment-index="0">\(1.6 \times 10^{-5}\)</span></td>
+                    <td>\(2.3 \times 10^{-4}\)</td>
+                    <td><span class="fragment highlight-green" data-fragment-index="0">\(6.0 \times 10^{-6}\)</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div></section><section data-background-color="rgb(212, 107, 86)" data-id="901898ee60f3c9ce487a07ac48bf6b4b"><div class="sl-block" data-block-type="text" data-name="text-ed6006" style="height: auto; width: 960px; left: 0px; top: 210px;" data-block-id="d4a4cded02f0f6ce2ef2d47aad91db9b">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+<header>
+<h3>Choice of \(\beta\)</h3>
+
+<ul>
+	<li>In our experiments: \(\beta=1/2\)</li>
+	<li>Adaptive \(\beta\)?</li>
+</ul>
+</header>
+</div>
+</div></section><section data-id="2f2b50ae8f321f05e41cb892613b601c" data-background-color="rgb(212, 107, 86)"><div class="sl-block" data-block-type="text" data-name="text-731076" data-block-id="49a14e3894f00d81daffbd50ce6baa8e" style="height: auto; width: 960px; left: 0px; top: 181px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+<header>
+<h3>Illustrations</h3>
+</header>
+
+<p>Average stopping time (Bernoulli)</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-da3b7f" data-block-id="073cbdaea82aa1743393b9866612a4bb" style="width: 355.097px; height: 272.756px; left: 124.903px; top: 296.295px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="828" data-natural-height="636" data-lazy-loaded="" data-src="phd-presentation/a05013c9ccb5374ccf9a47ef2cc50ad5.png"></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-addada" data-block-id="e85457016eb16fadf267b48b6ded8cc3" style="width: 348.955px; height: 272.756px; left: 492.652px; top: 296.295px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="806" data-natural-height="630" data-lazy-loaded="" data-src="phd-presentation/ed7d4843f0f00a64ed94da8284b98105.png"></div></div></section><section data-id="a934019cdbfb32acd91b5078f6f72350" data-background-color="rgb(212, 107, 86)"><div class="sl-block" data-block-type="text" data-name="text-a9b32f" data-block-id="8ac7158e0c1ae7f5b37b1c10d966a8eb" style="height: auto; width: 960px; left: 0px; top: 187.614px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+<header>
+<h3>Illustrations</h3>
+</header>
+
+<p>Average stopping time (Gaussian)</p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-753478" data-block-id="fca68b3e59ab163e710366c50f02f47a" style="width: 369.81px; height: 282.743px; left: 110.19px; top: 300.734px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="824" data-natural-height="630" data-lazy-loaded="" data-src="phd-presentation/351abc416806c87e5f9f1200a6c4c502.png"></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-bd5fde" data-block-id="3742f1a0ad543da8db12ddd4ab4711a9" style="width: 380.051px; height: 282.743px; left: 493.037px; top: 300.734px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="828" data-natural-height="616" data-lazy-loaded="" data-src="phd-presentation/a8f09a6f7c9f4e6acfb2f3b21d75cd50.png"></div></div></section></section><section class="stack" data-id="bc258dc5d296f9d06b505d7c87ecdee9"><section id="discussion" data-id="8064f54fb8ce2367eabb60e017cb0847" data-background-color="rgb(150, 179, 227)"><div class="sl-block" data-block-type="text" data-name="text-4997d2" data-block-id="48c6d4e885ea6c9fc5467dd7f2ff0692" style="height: auto; width: 960px; left: 1px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="">
+<h2>Extensions to the Linear Case</h2>
+</div></div></section><section data-id="38ff362298a2843880f6aa92d5189e1a" data-background-color="rgb(150, 179, 227)"><div class="sl-block" data-block-type="text" data-name="text-90d6a9" data-block-id="383bfc80aef128269b082c6b8aa2bea8" style="height: auto; width: 860.48px; left: 49.76px; top: 114.185px;">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+<header>
+<h3>BAI for linear bandits</h3>
+</header>
+
+<ul>
+	<li class="fragment" data-fragment-index="0">Each arm (context) is a vector \(\boldsymbol{x}\in\mathbb{R}^d\).</li>
+	<li class="fragment" data-fragment-index="1">
+<em>Unknown</em> regression parameter \(\boldsymbol{\theta}\in\mathbb{R}^d\).</li>
+	<li class="fragment" data-fragment-index="2">\(\mu_i = \boldsymbol{x_i}^\top\boldsymbol{\theta}\), <span style="color:#00FF00;">in this part</span>: a bandit model is simply characterised by \(\boldsymbol{\theta}\).</li>
+	<li class="fragment" data-fragment-index="2"><span style='color: rgb(255, 255, 255); font-family: "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;  font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: left;'>\(r_n = \boldsymbol{x}_{I_n}^\top\boldsymbol{\theta}+\epsilon_n\)</span></li>
+	<li class="fragment" data-fragment-index="3">
+<span class="red">Goal</span>: \(\boldsymbol{x^\star} = I^\star(\boldsymbol{\theta}) \triangleq \operatorname{arg\,max}_{\boldsymbol{x}\in\mathcal{X}}\boldsymbol{x}^\top\boldsymbol{\theta}\).</li>
+	<li class="fragment" data-fragment-index="4">
+<span style="color:#00FF00;">Fixed-confidence setting</span>: show that \(\mathbb{P}[{\boldsymbol{x}_{J_{\tau_\delta}}\neq \boldsymbol{x}^\star}] \leq \delta,\) while minimising the expected number of samples \(\mathbb{E}[\tau_\delta]\) <strong>(Soare et al., 2014)</strong>
+</li>
+</ul>
+</div>
+</div>
+</section><section data-background-color="rgb(150, 179, 227)" data-id="5b94a7ede126564da2a7c023c06f12e8"><div class="sl-block" data-block-type="text" data-name="text-0b15a2" style="height: auto; width: 898.966px; left: 30.517px; top: 169.114px;" data-block-id="fb00cfa3233824d8839cbd0f5da98001"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+<header>
+<h3>BAI for linear bandits</h3>
+</header>
+
+<ul>
+	<li class="fragment" data-fragment-index="0">Problem: no asymptotically optimal algorithms before<strong> (Soare et al., 2014; Xu et al., 2018; Tao et al., 2018; Fiez et al., 2019)</strong>
+</li>
+	<li class="fragment" data-fragment-index="1">Can TTTS/T3C be extended to the linear case?</li>
+	<li class="fragment" data-fragment-index="2">If not, what else can we do? <strong>(ICML 20)</strong>
+</li>
+</ul>
+</div></div></section><section data-background-color="rgb(150, 179, 227)" data-id="357f74f7f1892f5a6cc6a315f4ff46e8"><div class="sl-block" data-block-type="text" data-name="text-0b15a2" style="height: auto; width: 960px; left: 0px; top: 140px;" data-block-id="526fdabf2ac051cac97474bb24eaa996"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+<header>
+<h3>Problem formulation</h3>
+
+<p>Common assumptions</p>
+</header>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-886c40" data-block-id="5aa73f274f23b64887bfa03c91c35b54" style="height: auto; width: 866.456px; left: 46.772px; top: 247px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li class="fragment" data-fragment-index="0" style="text-align:left">
+<strong>Assumption</strong> We assume that \(\epsilon_n \sim \mathcal{N}(0,\sigma^2)\) is conditionally independent from the past.</li>
+	<li class="fragment" data-fragment-index="1" style="text-align:left">
+<strong>Assumption </strong>We assume that \(\exists L&gt;0\), \(\forall \boldsymbol{x}\in\mathcal{X}, \left\lVert\boldsymbol{x}\right\rVert\leq L\), where \(\left\lVert\boldsymbol{x}\right\rVert\) denotes the Euclidean norm of the vector \(\boldsymbol{x}\).</li>
+	<li class="fragment" data-fragment-index="2" style="text-align:left">
+<strong>Assumption                              </strong>is finite</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="math" data-name="math-cb15b4" data-block-id="06b4a01cc708582b637ef1346ba2c592" style="width: auto; height: auto; left: 251px; top: 413px;"><div class="sl-block-content notranslate fragment" style="z-index: 12; font-size: 60%;" data-fragment-index="2"><div class="math-input">\mathcal{X} = {\boldsymbol{x}_1, \cdots, \boldsymbol{x}_K}</div></div></div></section><section data-background-color="rgb(150, 179, 227)" data-id="d0c42886cbb5be398d6f9f3730267625"><div class="sl-block" data-block-type="text" data-name="text-0b15a2" style="height: auto; width: 960px; left: 0px; top: 140px;" data-block-id="a779b5cd76071e7f63f15e1b031bafa5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+<header>
+<h3>Problem formulation</h3>
+
+<p>Linear estimator</p>
+</header>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-886c40" style="height: auto; width: 944.135px; left: 7.9325px; top: 246px;" data-block-id="d2fb6f52b61a74b6065ce69d4526917f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li class="fragment" data-fragment-index="0" style="text-align:left">Regularised least-square estimation: \[\boldsymbol{\hat{\theta}}_n^{\lambda} = (\lambda \mathbb{I}_d + \boldsymbol{A}_{\boldsymbol{X_n}})^{-1}\boldsymbol{b}_{\boldsymbol{X}_n}\]</li>
+	<li class="fragment" data-fragment-index="1" style="text-align:left">Design matrix: </li>
+	<li class="fragment" data-fragment-index="2" style="text-align:left">Response vector:</li>
+	<li class="fragment" data-fragment-index="3" style="text-align:left">\(\lambda\in\mathbb{R}\) is the regularisation parameter.</li>
+	<li class="fragment" data-fragment-index="4" style="text-align:left">\(\boldsymbol{\Lambda}_{\boldsymbol{\omega}} \triangleq \sum_{i=1}^K \omega_i\boldsymbol{x}_i\boldsymbol{x}_i^\top\), where \(\boldsymbol{\omega} = (\omega_1,\cdots,\omega_K)\in\Sigma_K\).</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="math" data-name="math-a636c9" data-block-id="ff6d9acd16d7524903cd0c6693988053" style="width: auto; height: auto; left: 374.477px; top: 340.996px;"><div class="sl-block-content notranslate fragment" style="z-index: 12; font-size: 60%;" data-fragment-index="1"><div class="math-input">\boldsymbol{A}_{\boldsymbol{X}_n} \triangleq \sum_{t=1}^n \boldsymbol{\hat{x}}_t\boldsymbol{\hat{x}}_t^\top</div></div></div>
+<div class="sl-block" data-block-type="math" data-name="math-70cd29" data-block-id="0769282ca2b7c7f4eb1d334cb7b4164e" style="width: auto; height: auto; left: 412.441px; top: 378px;"><div class="sl-block-content notranslate fragment" style="z-index: 13; font-size: 60%;" data-fragment-index="2"><div class="math-input">\boldsymbol{b}_{\boldsymbol{X}_n} \triangleq \sum_{t=1}^n \hat{\boldsymbol{x}}_t r_t</div></div></div></section><section data-background-color="rgb(150, 179, 227)" data-id="a251261b4d73af7c7e106cd67d992570"><div class="sl-block" data-block-type="text" data-name="text-0b15a2" style="height: auto; width: 960px; left: 0px; top: 140px;" data-block-id="e9190ff35e185d369fab620cf3d42ee2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+<header>
+<h3>Lower bound</h3>
+</header>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-165235" data-block-id="92b779b8a6e1515702afaeea016d2900" style="height: auto; width: 830.818px; left: 64.591px; top: 220px;"><div class="sl-block-content fragment current-visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-fragment-index="0">
+<p style="text-align:left"><strong>Definition</strong> For any arm \(\boldsymbol{x}\in\mathcal{X}\) we define its <em>alternative set</em>, denoted by Alt(\(\boldsymbol{x}\)) the set of parameters where <span style="color:rgb(255, 255, 255); text-align:left">\(\boldsymbol{x}\) is not the best arm</span>, i.e.</p>
+</div></div>
+<div class="sl-block" data-block-type="math" data-name="math-d0a4df" data-block-id="ad68eb602401e9948e2c1dc8c428ac54" style="width: auto; height: auto; left: 278px; top: 376px;"><div class="sl-block-content notranslate fragment current-visible" style="z-index: 12; font-size: 60%;" data-fragment-index="0"><div class="math-input">\text{Alt}(\boldsymbol{x}) \triangleq \{\boldsymbol{\theta'}\in\Theta:\boldsymbol{x}\neq I^\star(\boldsymbol{\theta'})\}</div></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-6caf69" data-block-id="f5d457c0010a6ee8be165d77d63a3079" style="height: auto; width: 769.784px; left: 95.108px; top: 213px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" dir="ui">
+<ul>
+	<li class="fragment" data-fragment-index="1" style="text-align:left">Lower bound: for any \(\delta\)-correct strategy, we have \[\mathbb{E}[\tau_\delta] \geq T^\star(\boldsymbol{\theta})\log(\frac{1}{3\delta}).\]</li>
+	<li class="fragment" data-fragment-index="2" style="text-align:left">Characteristic time: \[T^\star(\boldsymbol{\theta})^{-1} \triangleq \max_{\boldsymbol{\omega} \in \Sigma_K} \inf_{\boldsymbol{\theta}'\in \text{Alt}(I^\star(\boldsymbol{\theta}))} \frac{1}{2}\left\lVert\boldsymbol{\theta} - \boldsymbol{\theta}'\right\rVert_{\boldsymbol{\Lambda}_{\boldsymbol{\omega}}}^2\]</li>
+	<li class="fragment" data-fragment-index="3" style="text-align:left">In particular: <span style="color:#00FF00">\[T^\star(\boldsymbol{\theta}) \triangleq \inf_{\boldsymbol{\omega}\in\Sigma_K}\max_{\boldsymbol{x}\neq \boldsymbol{x}^\star} \frac{2\left\lVert\boldsymbol{x}^\star - \boldsymbol{x}\right\rVert^2_{\boldsymbol{\Lambda}_{\boldsymbol{\omega}}^{-1}}}{(\boldsymbol{x}^\top\boldsymbol{\theta}-(\boldsymbol{x}^\star)^\top\boldsymbol{\theta})^2}\]</span>
+</li>
+</ul>
+</div></div></section><section data-background-color="rgb(150, 179, 227)" data-id="f96a576b0cf9759a220b5074cf22d26e"><div class="sl-block" data-block-type="text" data-name="text-0b15a2" style="height: auto; width: 960px; left: 0px; top: 70px;" data-block-id="aeb31062010bdb8063123c816b62cdf2">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+        <header>
+            <h3>Direct adaptation of TTTS/T3C</h3>
+        </header>
+    </div>
+</div>
+
+<div class="sl-block" data-block-type="text" data-name="text-377916" data-block-id="45cfae7181c0ce6b2bca66aa1d59c41e" style="height: auto; width: 812.987px; left: 73.5065px; top: 140px;">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li class="fragment" data-fragment-index="0">Prior: \(\boldsymbol{\theta}\sim \mathcal{N}(0,\sigma^2/\lambda\mathbb{I}_d) \rightarrow\mathcal{N}(\hat{\boldsymbol{\theta}}^\lambda_n,\hat{\boldsymbol{\Sigma}}_n)\)</li>
+	<li class="fragment" data-fragment-index="1">Posterior update: \[(\hat{\boldsymbol{\Sigma}}_n)^{-1} = \frac{\lambda}{\sigma^2}\mathbb{I}_d + \frac{1}{\sigma^2}\sum_{t=1}^n \hat{\boldsymbol{x}}_t\hat{\boldsymbol{x}}_t^\top \quad \text{and} \quad \hat{\boldsymbol{\theta}}^\lambda_n = \frac{1}{\sigma^2}\hat{\boldsymbol{\Sigma}}_n \boldsymbol{b}_{\boldsymbol{X}_n}.\]</li>
+	<li class="fragment" data-fragment-index="2">Transportation cost: \[W_n(i,j) = \frac{(\boldsymbol{x}_i^\top\hat{\boldsymbol{\theta}}^\lambda_n-\boldsymbol{x}_j^\top\hat{\boldsymbol{\theta}}^\lambda_n)^2}{2\left\lVert\boldsymbol{x}_i-\boldsymbol{x}_j\right\rVert_{\hat{\boldsymbol{\Sigma}}_n}^2}\mathbb{I}\left\{\boldsymbol{x}_j^\top\hat{\boldsymbol{\theta}}^\lambda_n&lt;\boldsymbol{x}_i^\top\hat{\boldsymbol{\theta}}^\lambda_n\right\}\]</li>
+	<li class="fragment" data-fragment-index="3">Stopping rule: \[\tau_\delta \triangleq \inf \left\lbrace n \in \mathbb{N} : \max_{i \in [K]} \min_{j \neq i } W_{n}(i,j) &gt; d_{n,\delta} \right\rbrace\]</li>
+	<li class="fragment" data-fragment-index="3">Decision rule: \[J_n = \text{argmax}_{j}\boldsymbol{x}_j^\top\hat{\boldsymbol{\theta}}_n^{\lambda}\]</li>
+</ul>
+</div>
+</div></section><section data-background-color="rgb(150, 179, 227)" data-id="354fab210261f705abd20232ae5089db"><div class="sl-block" data-block-type="text" data-name="text-0b15a2" style="height: auto; width: 960px; left: 0px; top: 70px;" data-block-id="dc00bc85b41e8efeada442bb3c07cdd4">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+<header>
+<h3>Direct adaptation of TTTS/T3C</h3>
+
+<p>It can fail...</p>
+</header>
+</div>
+</div>
+
+<div class="sl-block" data-block-type="image" data-name="image-f914c3" data-block-id="696fceaffd8d2445aaf30011726140aa" style="width: 441.431px; height: 441.431px; left: 259.284px; top: 169.999px; min-width: 1px; min-height: 1px;"><div class="sl-block-content fragment" style="z-index: 11;" data-fragment-index="0"><img style="" data-natural-width="1350" data-natural-height="1350" data-lazy-loaded="" data-src="phd-presentation/9d82f06c36b00781769b9c73c733081d.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-564eaf" data-block-id="5782ed649ed24d15611b681a5e15a941" style="height: auto; width: 687.666px; left: 136.167px; top: 611.43px;"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="0">
+<p><span style="font-size:0.7em">A hard problem instance for linear best-arm identification</span></p>
+</div></div></section><section data-background-color="rgb(150, 179, 227)" data-id="79a535141c0f34c86fa64f617721c93b"><div class="sl-block" data-block-type="text" data-name="text-0b15a2" style="height: auto; width: 960px; left: 0px; top: 25.7216px;" data-block-id="8abe9f284d71a4257a5cc3a12a48bc20">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+<header>
+<h3>A study of BAI complexities</h3>
+</header>
+</div>
+</div>
+
+<div class="sl-block" data-block-type="text" data-name="text-ee928b" data-block-id="c8d6e547c82611dfade082feba01103b" style="height: auto; width: 962.99px; left: -1.495px; top: 70px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li class="fragment" data-fragment-index="0">Estimate uniformly the means of the arms: <span style="color:#00FF00">optimal design </span>\[\mathcal{XX}=\min_{\boldsymbol{\omega}\in\Sigma_K} \max_{\boldsymbol{x}\in\mathcal{X}} \left\lVert\boldsymbol{x}\right\rVert_{\boldsymbol{\Lambda}_{\boldsymbol{\omega}}^{-1}}^2\]</li>
+	<li class="fragment" data-fragment-index="1">Estimate uniformly the means of the directions: <span style="color:#0000FF">transductive design</span> \[\mathcal{XY}_{\text{dir}}=\min_{\boldsymbol{\omega}\in\Sigma_K} \max_{\boldsymbol{y}\in\mathcal{Y}_{\text{dir}}} \left\lVert\boldsymbol{y}\right\rVert_{\boldsymbol{\Lambda}_{\boldsymbol{\omega}}^{-1}}^2\] where \[\mathcal{Y}_{\text{dir}}\triangleq\{\boldsymbol{x}-\boldsymbol{x}':\ (\boldsymbol{x},\boldsymbol{x}')\in\mathcal{X}\times\mathcal{X}\}\] </li>
+	<li class="fragment" data-fragment-index="2">Estimate the means of the gap-weighted directions: <span style="color:#FF0000">best-arm identification </span>\[T^\star(\boldsymbol{\theta}) = 2 \mathcal{X}\mathcal{Y}^\star(\boldsymbol{\theta}) \triangleq 2 \min_{\boldsymbol{\omega}\in\Sigma_K} \max_{\boldsymbol{y}\in\mathcal{Y}^\star(\boldsymbol{\theta})} \left\lVert\boldsymbol{y}\right\rVert_{\boldsymbol{\Lambda}_{\boldsymbol{\omega}}^{-1}}^2\] where \[\mathcal{Y}^\star \triangleq \left\{ \frac{\boldsymbol{x}^\star(\boldsymbol{\theta})- \boldsymbol{x}}{\left|(\boldsymbol{x}^\star(\boldsymbol{\theta})- \boldsymbol{x})^\top\boldsymbol{\theta}\right|}: \boldsymbol{x}\in\mathcal{X}/\big\{\boldsymbol{x}^\star(\boldsymbol{\theta})\big\}  \right\}\]</li>
+</ul>
+</div></div></section><section data-background-color="rgb(150, 179, 227)" data-id="e8927bb24f4fa5b695a81d60c7299964"><div class="sl-block" data-block-type="text" data-name="text-0b15a2" style="height: auto; width: 960px; left: 0px; top: 194.396px;" data-block-id="661c1704710fdda0730d20fb55e63152">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+<header>
+<h3>A study of BAI complexities</h3>
+
+<p>Ordering <strong>(ICML 20)</strong></p>
+</header>
+</div>
+</div>
+
+<div class="sl-block" data-block-type="math" data-name="math-06f95f" data-block-id="cfa05eac85e017cdc8fc945e217416ca" style="width: auto; height: auto; left: 70px; top: 344px;"><div class="sl-block-content notranslate" style="z-index: 12;"><div class="math-input">T^\star(\boldsymbol{\theta}) \leq 2 \frac{\mathcal{XX}}{\Delta_{\text{min}}(\boldsymbol{\theta})^2}\leq 8 \frac{\mathcal{XY}}{\Delta_{\text{min}}(\boldsymbol{\theta})^2} = \frac{8d}{\Delta_{\text{min}}(\boldsymbol{\theta})^2}</div></div></div></section><section data-background-color="rgb(150, 179, 227)" data-id="a98538e1a02cc35b708c57238e350be4"><div class="sl-block" data-block-type="text" data-name="text-0b15a2" style="height: auto; width: 960px; left: 0px; top: 81.2064px;" data-block-id="5f5486fb6d11300f3e1ec45a41ffbd74">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+<header>
+<h3>BAI as a game</h3>
+</header>
+</div>
+</div>
+
+<div class="sl-block" data-block-type="text" data-name="text-1216c2" data-block-id="ddb957a1779e8559e7ce5e935651d2dd" style="height: auto; width: 788.649px; left: 81px; top: 166.811px;"><div class="sl-block-content fragment current-visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-fragment-index="0">
+<p style="text-align:left"><span style="color:#00FF00">\(T^\star(\boldsymbol{\theta})^{-1}\) </span>can be regarded as the <span style="color:#FF0000">value of a zero-sum game</span> between a learner playing action \(\boldsymbol{x}\) according to a weight vector \(\boldsymbol{\omega}\) and the nature playing an alternative \(\boldsymbol{\theta}'\):</p>
+</div></div>
+<div class="sl-block" data-block-type="math" data-name="math-477ad6" data-block-id="2f6b7238b100472e9c13a25bec1a88dc" style="width: auto; height: auto; left: 111.5px; top: 313.025px;"><div class="sl-block-content notranslate fragment current-visible" style="z-index: 12; font-size: 60%;" data-fragment-index="0"><div class="math-input">T^\star(\boldsymbol{\theta})^{-1} = \max_{\boldsymbol{\omega}\in\Sigma_K}\inf_{\boldsymbol{\theta}'\in\text{Alt}(I^\star(\boldsymbol{\theta}))}\frac{1}{2}\sum_{\boldsymbol{x}\in\mathcal{X}}\omega_{\boldsymbol{x}}\left\lVert\boldsymbol{\theta}-\boldsymbol{\theta}'\right\rVert_{\boldsymbol{x}\boldsymbol{x}^\top}</div></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-72232a" data-block-id="a1e648d7c4555c070e0de670c48e3a3d" style="height: auto; width: 942.415px; left: 8.2925px; top: 293.525px;"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-fragment-index="1">
+<p>Leads to the algorithm of LinGame which is asymptotically optimal... <strong>(ICML 20)</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-0f0df0" data-block-id="54a1cbd186fb53f903174af9a9b4530a" style="height: auto; width: 788.649px; left: 81px; top: 381px;"><div class="sl-block-content fragment current-visible" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;" data-fragment-index="0">
+<p style="text-align:left"><span style="font-size:1.0em">Ensure a ε-approximation of the saddle point of the lower-bound game. </span></p>
+</div></div></section><section data-background-color="rgb(150, 179, 227)" data-id="aebba8194c9421a3ad66101468990fb2"><div class="sl-block" data-block-type="text" data-name="text-0b15a2" style="height: auto; width: 960px; left: 0px; top: 81.2064px;" data-block-id="1a33903787f2429e278e422f0fc0737b">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+<header>
+<h3>Illustrations</h3>
+
+<p>The usual hard instance (with different \(\delta\))</p>
+</header>
+</div>
+</div>
+
+<div class="sl-block" data-block-type="image" data-name="image-2e053d" data-block-id="0275717fd2c4f552fc66a0f3f2224a3b" style="width: 290.118px; height: 193.528px; left: 334.941px; top: 210px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1667" data-natural-height="1112" data-lazy-loaded="" data-src="phd-presentation/bf485fad0abe090ae045dcad18e9819f.png"></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-3bfcbd" data-block-id="c17543603a24b273e7aee3c6183b5fae" style="width: 289.979px; height: 193.435px; left: 510.021px; top: 420px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1667" data-natural-height="1112" data-lazy-loaded="" data-src="phd-presentation/f1d45bd93da7c5e5c588a3b93722bfc4.png"></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-15b1a8" data-block-id="3aa06981a825afdc1d3ebcec25cce5d2" style="width: 289.979px; height: 193.435px; left: 160px; top: 420px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1667" data-natural-height="1112" data-lazy-loaded="" data-src="phd-presentation/4d67fe622ca52c17fb1fcecb412b9e53.png"></div></div></section><section data-background-color="rgb(150, 179, 227)" data-id="393948840e5d46c290ea28c9fcfaa3da"><div class="sl-block" data-block-type="text" data-name="text-0b15a2" style="height: auto; width: 960px; left: 0px; top: 81.2064px;" data-block-id="5fbfa8241438566089b53d143a1c80d7">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+<header>
+<h3>Illustrations</h3>
+
+<p>Random unit sphere (with different dimension)</p>
+</header>
+</div>
+</div>
+
+<div class="sl-block" data-block-type="image" data-name="image-4c548f" data-block-id="f4fec5d2d33e44f82735fe4a4c3c8bc6" style="width: 290.118px; height: 193.528px; left: 160px; top: 210px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1667" data-natural-height="1112" data-lazy-loaded="" data-src="phd-presentation/8f44b5c09dea4c6341d296576471615e.png"></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-e39445" data-block-id="762e4115c77615b63672e733ee52737d" style="width: 290.118px; height: 193.528px; left: 509.882px; top: 210px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1667" data-natural-height="1112" data-lazy-loaded="" data-src="phd-presentation/e74f13ba406734a35984e3bb865c43f8.png"></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-836c58" data-block-id="fb13ee7032072f31959ea26b26f1cbb1" style="width: 290.118px; height: 193.528px; left: 160px; top: 420px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1667" data-natural-height="1112" data-lazy-loaded="" data-src="phd-presentation/438fa510ccde7c3eeab1bca78a23c1da.png"></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-965295" data-block-id="dbbd1deddc86c0f0e3eba6668fb53f06" style="width: 290.118px; height: 193.528px; left: 509.882px; top: 420px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="1667" data-natural-height="1112" data-lazy-loaded="" data-src="phd-presentation/a4c0cb9923e43486e1f90a8c0d67f3e8.png"></div></div></section><section data-background-color="rgb(150, 179, 227)" data-id="295faeda12aee420c9223df9414a3ea1">
+
+
+
+
+<div class="sl-block" data-block-type="text" data-name="text-32b654" data-block-id="2746a5cd4ee337678731f0386fd50c34" style="height: auto; width: 850px; left: 55px; top: 280px;"><div class="sl-block-style" style="z-index: 10; transform: rotate(0deg);"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<ul style="color:rgb(255, 255, 255)">
+	<li class="fragment" data-fragment-index="3">Can be done with Track-n-Stop <strong>(Garivier and Kaufmann, 2016)</strong>
+</li>
+	<li class="fragment" data-fragment-index="3">Recent work on the topic: <strong>Jedra and Prouti</strong><span><strong><span>ère (2020); Katz-Samuels et al. (2020); Zaki et al. (2020); Yang and Tan (2021)</span></strong></span>
+</li>
+</ul>
+</div></div></div></section></section><section class="stack" data-id="418959e65e36db88158348dfd619e4f1"><section data-id="331babff1eaf4ac12c0a4983ccb4e1a4" data-background-color="rgb(148, 182, 133)"><div class="sl-block" data-block-type="text" style="width: 800px; left: 90px; top: 280px; height: auto;" data-block-id="4bf8a70a079bfbf401d8eaff362a53e4"><div class="sl-block-style" style="z-index: 10; transform: rotate(0deg);"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Part 2: Infinite or Continuous Search Space</h2>
+</div></div></div></section><section data-background-color="rgb(148, 182, 133)" data-id="0f327faf81c5803327747fb93ed9b655"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 258px; height: auto;" data-block-id="1ea4f0daf5a5e3aba7fe1b08148cfa9d"><div class="sl-block-style" style="z-index: 10; transform: rotate(0deg);"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<ul>
+	<li>
+	<p>Continuum-armed bandits: \(f\) lies in some <strong>metric</strong> space</p>
+	</li>
+	<li>
+	<p>Infinitely-armed bandits <strong>(Berry et al., 1997; Wang et al., 2008; Bonald and Prouti<span>ère, 2013; Carpentier and Valko, 2015</span>)</strong>: arms drawn from some <strong>reservoir</strong> distribution</p>
+	</li>
+</ul>
+</div></div></div></section><section data-background-color="rgb(148, 182, 133)" data-id="8ce28b504bbb5aea5f89f4d8eed335a1"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 151.701px; height: auto;" data-block-id="0cfca6471900e0d2bc761efc29310d19"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h3>HPO as continuum-armed bandits?</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-5fbdc9" data-block-id="31cd015b02df87e7aaaa2aa7860a573e" style="height: auto; width: 892.079px; left: 33.9605px; top: 241px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li class="fragment" data-fragment-index="0">Tree-search algorithm GPO <strong>(ALT 19)</strong>
+</li>
+	<li class="fragment" data-fragment-index="0">See also <strong>Munos (2011), Valko et al. (2013), Azar et al. (2014), Grill et al. (2015), Bartlett et al. (2019), Torossian et al. (2019), Hadiji (2019)</strong>
+</li>
+</ul>
+</div></div></section><section id="dttts" data-id="3df483c7b93f9de50b8d60b027fa61c8" data-background-color="rgb(148, 182, 133)"><div class="sl-block" data-block-type="text" data-name="text-e63b8a" data-block-id="6194b49c1b2fa5c406f17c822585b6f5" style="height: auto; width: 960px; left: 6.76791px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="">
+<h2>TTTS Applied to HPO</h2>
+</div></div></section><section data-id="cbf6889acae1388b8d86dd778f5a2ee7" data-background-color="rgb(148, 182, 133)"><div class="sl-block" data-block-type="text" data-name="text-a0edb8" data-block-id="2a57615675ef7242f9ec995e55e5c670" style="height: auto; width: 830px; left: 65px; top: 289px;">
+    <div class="sl-block-style" style="z-index: 10; transform: rotate(0deg);"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+<header>
+<p style="text-align: left;">We tackle <span class="red">hyper-parameter tuning</span> for <em>supervised learning</em> tasks</p>
+
+<ul>
+	<li style="text-align: left;">global optimisation task: \(\min\{f(\lambda):\lambda\in\Omega\}\)</li>
+	<li style="text-align: left;">\(f(\lambda) \triangleq \mathbb{E}\left[\ell\left(Y,\hat g_{\lambda}^{\,(n)}(X)\right) \right]\) measures the generalization power</li>
+</ul>
+</header>
+</div></div>
+</div>
+<div class="sl-block" data-block-type="text" data-name="text-8ec74d" data-block-id="995ff75c55699e00c8bf8aba5e4b8f62" style="height: auto; width: 600px; left: 180px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>Problem formulation</h3>
+</div></div></section><section data-id="f01edf2e0ba140fac1b2bfada614479d" data-background-color="rgb(148, 182, 133)"><div class="sl-block" data-block-type="text" data-name="text-eba3bf" data-block-id="d969328eda728c24e736d4998d70ae38" style="height: auto; width: 938px; left: 11px; top: 92px;">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+<header>
+<h3>Problem formulation</h3>
+</header>
+
+<p class="fragment" data-fragment-index="0" style="text-align: left">We see the problem as BAI in a <em>stochastic infinitely-armed bandit</em>: arm means are drawn from some <em>reservoir distribution \(\nu_0\)</em></p>
+
+<div class="r-stack">
+<figure class="fragment fade-in-then-out" data-fragment-index="1"><img data-lazy-loaded="" width="100%" data-src="phd-presentation/fa3e45793cc6a3d2c89594e0f10b6322.png"></figure>
+
+<ul class="fragment" data-fragment-index="2" style="text-align: left">
+	<li>
+<span class="green">In each round</span>:</li>
+	<li>(optional) query a new arm from \(\nu_0\)</li>
+	<li>sample an arm that was previously queried</li>
+</ul>
+</div>
+
+<p class="fragment" data-fragment-index="3" style="text-align: left"><span class="red">Goal</span>: output an arm with mean close to \(\mu^\star\)</p>
+</div>
+</div></section><section data-id="876750c20c7e1d5457811c1bdaf5c383" data-background-color="rgb(148, 182, 133)"><div class="sl-block" data-block-type="text" data-name="text-5c591e" data-block-id="d50afba45b04bb8501d1853fb8f09748" style="height: auto; width: 960px; left: 0px; top: 194.5px;">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="">
+        <header>
+            <h3>Problem formulation</h3>
+        </header>
+        <p>HPO as a BAI problem</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>BAI</th>
+                    <th>HPO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>query \(\nu_0\)</td>
+                    <td>pick a new configuration \(\textcolor{yellow}{\lambda}\)</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>sample an arm</td>
+                    <td>train the classifier</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>reward</td>
+                    <td>cross-validation loss</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div></section><section data-id="9675eb6a14939cd168a1ede661ced939" data-background-color="rgb(148, 182, 133)"><div class="sl-block" data-block-type="text" data-name="text-419274" data-block-id="0f8109532b41b0dd926f9634e0b117d0" style="height: auto; width: 940px; left: 10px; top: 59.5596px;">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+        <header>
+            <h3>How?</h3>
+        </header>
+
+        <p><u>D</u>ynamic <u>T</u>op-<u>T</u>wo <u>T</u>hompson <u>S</u>ampling <strong>(ICML-AutoML 20)</strong></p>
+
+        <div class="r-stack">
+            <ul class="fragment fade-in-then-out" data-fragment-index="0" style="text-align: left">
+                <li>Beta-Bernoulli Bayesian bandit model</li>
+                <li>a uniform prior over the mean of new arms</li>
+            </ul>
+
+            <figure class="fragment fade-in-then-out" data-fragment-index="1"><img data-lazy-loaded="" width="60%" data-src="phd-presentation/f38148d1d0a0dfcdaa46890410e4381a.png"></figure>
+
+            <figure class="fragment fade-in-then-out" data-fragment-index="2"><img data-lazy-loaded="" width="60%" data-src="phd-presentation/db1869cbf3da212c45988cb5e6b4e54e.png"></figure>
+
+            <p class="fragment" data-fragment-index="3" style="text-align: left">In summary: in each round, query a new arm endowed with a Beta(1,1) prior, <span class="red">without sampling it</span>, and run TTTS on the new set of arms</p>
+        </div>
+    </div>
+</div></section><section data-id="c1010b7fac5f4ac6ed3bd53b345e74e5" data-background-color="rgb(148, 182, 133)"><div class="sl-block" data-block-type="text" data-name="text-1b9ebb" data-block-id="a487d929423efffba098f027f91f242e" style="height: auto; width: 926px; left: 17px; top: 34px;">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+        <header>
+            <h3>How?</h3>
+        </header>
+
+        <p>Order statistic trick</p>
+
+        <p class="fragment" data-fragment-index="0" style="text-align: left">With \(\mathcal{L}_{t-1}\) the list of arms that have been effectively sampled at time \(t\), we run TTTS on the set \(\mathcal{L}_{t-1} \cup \{\mu_0\}\) where \(\mu_0\) is a pseudo-arm with posterior Beta(\(t-|\mathcal{L}_{t-1}|, 1\)).</p>
+
+        <figure class="fragment fade-in-then-out" data-fragment-index="1"><img data-lazy-loaded="" width="50%" data-src="phd-presentation/bb5b8bf4344533a3eb67fd5900f636c0.png"></figure>
+    </div>
+</div>
+</section><section data-id="7ba8656f1cce8d4ac3820e855b9afe7d" data-background-color="rgb(148, 182, 133)"><div class="sl-block" data-block-type="text" data-name="text-accf4e" data-block-id="c50d1ccaeb1bb775fc937ae6373b3b6c" style="height: auto; width: 960px; left: 0px; top: 182.5px;">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="">
+        <header>
+            <h3>Experiments</h3>
+        </header>
+        <p>Setting</p>
+        <table style="font-size: 75%" class="fragment" data-fragment-index="0">
+            <thead>
+                <tr>
+                    <th>Classifier</th>
+                    <th>Hyper-parameter</th>
+                    <th>Type</th>
+                    <th>Bounds</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SVM</td>
+                    <td>C</td>
+                    <td>\(\mathbb{R}^+\)</td>
+                    <td>\(\left[ 10^{-5}, 10^{5} \right]\)</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>\(\gamma\)</td>
+                    <td>\(\mathbb{R}^+\)</td>
+                    <td>\(\left[ 10^{-5}, 10^{5} \right]\)</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>MLP</td>
+                    <td>hidden layer size</td>
+                    <td>Integer</td>
+                    <td>\(\left[ 5, 50 \right]\)</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>\(\alpha\)</td>
+                    <td>\(\mathbb{R}^+\)</td>
+                    <td>\(\left[ 0, 0.9 \right]\)</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>learning rate init</td>
+                    <td>\(\mathbb{R}^+\)</td>
+                    <td>\(\left[ 10^{-5}, 10^{-1} \right]\)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div></section><section data-id="3bf5bb3594998746ead02cb585f9c893" data-background-color="rgb(148, 182, 133)"><div class="sl-block" data-block-type="text" data-name="text-142327" data-block-id="2f0ce2e426608ab430d7edda75b321ec" style="height: auto; width: 960px; left: 0px; top: 92px;">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+        <header>
+            <h3>Experiments</h3>
+        </header>
+
+        <p>Some results (I)</p>
+
+        <figure class="fragment" data-fragment-index="0"><img data-lazy-loaded="" width="49%" data-src="phd-presentation/2b0051b5de3b48833765380817b8e0e2.png"> <img data-lazy-loaded="" width="49%" data-src="phd-presentation/90309e34d8da73cbfa4e52767d353317.png"></figure>
+    </div>
+</div>
+
+</section><section data-id="bd0b99a33d64c39a45e00524202d51e4" data-background-color="rgb(148, 182, 133)"><div class="sl-block" data-block-type="text" data-name="text-459668" data-block-id="36802402544488ae197c46698b8eb3d1" style="height: auto; width: 960px; left: 0px; top: 92px;">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+        <header>
+            <h3>Experiments</h3>
+        </header>
+        <p>Some results (II)</p>
+        <figure class="fragment" data-fragment-index="0">
+            <img width="49%" data-lazy-loaded="" data-src="phd-presentation/e814f02324ef3c9163a5ed8ebca014e8.png">
+            <img width="49%" data-lazy-loaded="" data-src="phd-presentation/943603a12064a26fd0278f7e99cb0cff.png">
+        </figure>
+    </div>
+</div>
+
+</section></section><section class="stack" data-id="f7a8f049ae248a287c39c258ff879646"><section data-id="1ac2a098de126f95d79f8eef39e58b07"><div class="sl-block" data-block-type="text" data-name="text-e1fc76" data-block-id="ea600eadc300565282ca955f7c6a3cce" style="height: auto; width: 600px; left: 180px; top: 66px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Perspectives</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-910afa" data-block-id="7b417fd744265fe09b62c0ae7fd25c53" style="height: auto; width: 737.603px; left: 111.198px; top: 157.387px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li class="visible">Direct follow-ups
+	<ul>
+		<li class="fragment" data-fragment-index="0">Efficient Bayesian algorithms for linear BAI or even more general structure</li>
+		<li class="fragment" data-fragment-index="1">Finite-time analysis for TTTS/T3C?</li>
+	</ul>
+	</li>
+	<li>HPO, AutoML...
+	<ul>
+		<li class="fragment" data-fragment-index="2">Task-specific rather than task-agnostic</li>
+	</ul>
+	</li>
+	<li>Reinforcement learning
+	<ul>
+		<li class="fragment" data-fragment-index="3">Extension of contextual bandits</li>
+		<li class="fragment" data-fragment-index="4">e.g. best-policy identification</li>
+	</ul>
+	</li>
+	<li>Societal impact: safety, privacy, fairness...</li>
+</ul>
+</div></div></section><section data-id="c695de6de7c0b228cbfc39db1f52baff"><div class="sl-block" data-block-type="text" data-name="text-f5d797" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="b29ad3e17c829a7da2e8ae7281910325"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+<header>
+<h3>References</h3>
+</header>
+
+<ul>
+	<li class="fragment" data-fragment-index="0">Presentation based on:
+	<ul>
+		<li class="fragment" data-fragment-index="0">
+<em>Shang et al., 2019: <a href="https://xuedong.github.io/static/documents/shang2020t3c.pdf" style="color: rgb(113, 233, 244);" target="_blank">General parallel optimisation without a metric</a></em> (ALT 2019)</li>
+		<li class="fragment" data-fragment-index="0">
+<em>Shang et al., 2020a: <a href="https://xuedong.github.io/static/documents/shang2020t3c.pdf" target="_blank">Fixed-confidence guarantees for Bayesian best-arm identification</a></em> (AISTATS 2020)</li>
+		<li class="fragment" data-fragment-index="0">
+<em>Shang et al., 2020b: <a href="https://xuedong.github.io/static/documents/shang2020t3c.pdf" target="_blank">A simple dynamic bandit algorithm for hyper-parameter tuning</a></em> (ICML-AutoML 2019)</li>
+		<li class="fragment" data-fragment-index="0">
+<em>Degenne et al., 2020: <a href="https://xuedong.github.io/static/documents/degenne2020game.pdf" target="_blank">Gamification of pure exploration for linear bandits</a></em> (ICML 2020)</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-id="b820a1c6cd762bde9549e2689dc22999"><div class="sl-block" data-block-type="text" data-name="text-f5d797" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="716d69a2df1d529f8d0da66daff999a8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" data-has-custom-html="" style="z-index: 10;">
+<header>
+<h3>References</h3>
+</header>
+
+<ul>
+	<li class="fragment" data-fragment-index="0">Other references
+	<ul>
+		<li class="fragment" data-fragment-index="0">
+<em><a href="https://arxiv.org/pdf/1602.08448.pdf" target="_blank">Simple Bayesian algorithms for best arm identification</a></em>, Russo (COLT 2016)</li>
+		<li class="fragment" data-fragment-index="0">
+<em><a href="https://proceedings.mlr.press/v28/karnin13.pdf" target="_blank">Almost optimal exploration in multi-armed bandits</a></em>, Karnin et al. (ICML 2013)</li>
+		<li class="fragment" data-fragment-index="0">
+<em><a href="https://openreview.net/pdf?id=ry18Ww5ee" target="_blank">Hyperband: Bandit-based configuration evaluation for hyperparameter optimization</a></em>, Li et al. (ICLR 2017)</li>
+		<li class="fragment" data-fragment-index="0">
+<em><a href="https://papers.nips.cc/paper/2017/file/b19aa25ff58940d974234b48391b9549-Paper.pdf" target="_blank">Improving the expected improvement algorithm</a></em>, Qin et al. (NeurIPS 2017)</li>
+		<li class="fragment" data-fragment-index="0">
+<em><a href="https://proceedings.mlr.press/v37/carpentier15.pdf" target="_blank">Simple regret for infinitely many armed bandits</a></em>, Carpentier and Valko (ICML 2015)</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":2243015,"slug":"phd-presentation","title":"phd-presentation","description":"","width":960,"height":700,"margin":0.05,"visibility":"self","published_at":null,"sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/ef731992ad927e69690aa26ba1f67449/thumb.jpg?1632772749","view_count":0,"user":{"id":1977761,"username":"xuedong","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/d3bb38dfba17dd86483117f160c5714d?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"lite","team_id":null,"settings":{"id":20407561,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"default","theme_id":null,"theme_font":"palatino","theme_color":"grey-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":62,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":1,"data_updated_at":1632912411183,"font_typekit":null,"font_google":null,"time_limit":45,"navigation_mode":"default","upsizing_enabled":true,"notes":{"1160bd910778a60887651ed3da0fb126":"Before I start, I just would like to summarise the thesis or today's presentation in a few words. As indicated by the title, I'm interested in designing adaptive algorithms for optimisation problems with stochastic feedbacks. To tackle this problem, I will introduce efficient Bayesian algorithms for different settings and I will show that we can have interesting applications that take inspiration from those algorithms.","283540f12a90482f0d24c39dac56a703":"More precisely, in this thesis, we're interested in sequential optimisation problems where a learner sequentially feeds inputs to an environment and from which they receive feedbacks. The learner needs to output a guess for the optimal input after a number of trials. Under some circumstances, a single interaction with the environment could be extremely costly, so this is why smart sampling strategies is of great interest.\n\nMathematically speaking, we are simply interested in optimising a function f within some search space X. The search space here can be finite, infinite, and even continuous. And we'll see later that this thesis is driven by different kind of search spaces and we are in particular interested in optimisation of functions for which few regularity assumptions are made, and only noisy (or stochastic) function evaluations can be observed.","8c263bc926b37ec049adaa4ba022d580":"The main tool that we use to address sequential optimisation in this thesis is the model of multi-armed bandits. \n\nA bandit model, in its simplest form, is simply a collection of K probability distributions, where the learner can choose to sample one of the distributions (or often called pulling an arm in the vocabulary of bandits) at each step, and observes a stochastic reward that follows the corresponding underlying distribution.\n\nIn this presentation, we shall simply denote a bandit model by the vector of its arm means.","8a976ddaf9e9732f6acabe5baa482201":"In his seminal work, Robbins defines the objective of a bandit learner as maximising the total rewards in the long run. An observation is that the learner is required to simultaneously acquire new information for potential future well-being (exploration), and optimise the current decision based on past observations (exploitation). Such phenomena is stated as the exploration-exploitation dilemma, and is present in many real-world tasks.\n\nHowever, exploitation does not necessarily provide meaningful incentives in some real applications. Typically, in some cases, we do not really care about the potential losses incurred during the whole learning phase. Indeed, we only aim at finding the (near-)optimum of the target function quickly. In this context, it is more natural to assess the learner in an optimisation fashion, which naturally links MAB to sequential optimisation problems that we would like to study in this thesis. And this setting is called best-arm identification.","61df6a4ad2396052775272ff78a94cf1":"Sequential optimisation is motivated by quite a few applications in the real world. Some well-known examples are A/B/C testing for ad placement, clinical trials.\n\nBut here I would like to emphasise a bit on a rather non-standard example which is the hyper-parameter optimisation for machine learning models. In this case, the function that we would like to optimise could be for example the cross-validation loss of a machine learning model given a set of hyper-parameters as input. HPO is a quite tedious part for many machine learning practitioners, and for many large machine learning models, a single evaluation of the model given a set of hyper-parameters could be very expensive both in time and resources.\n\nAnd this will be one topic that I will elaborate more later on in this presentation.","fef7f8b3cf09da502c3ed44364ad198c":"So here is the outline. The presentation is split into two parts. I will start by the simplest setting where the search space X is finite. Then I will talk about the extensions to BAI with linear feedbacks before I continue with more sophisticated infinite arm space. I will in particular discuss how can we take inspiration from previous parts to treat hyper-parameter optimisation.","2683ada05a8fed9a9b3d338f243e1dc1":"So let me start with vanilla best-arm identification.","be8c44c5eaedab1e3e1b49792554267f":"To start with, I would like to formalise what a BAI algorithm should do. There are three main components for a finitely-armed BAI algorithm:\n(1) a sampling rule that tells us which arm to play next; \n(2) then we need a stopping rule that tells us when to stop the algorithm; there are two major types of stopping rules, the fixed-budget setting where we stop when we run out of the budget. And in this part of the presentation, I will mainly interested by another setting called fixed-confidence setting for which a risk level \\delta is given and we aim to minimise the number of samples needed to reach a probability error that is less than that risk level;\n(3) finally, we also need a decision rule that outputs a guess J_\\tau of the optimal arm I^\\star.","68c4c686b1cfe27e0f9733dcde018c56":"And in this part, we are interested in a very simple Bayesian algorithm, or more precisely a Bayesian sampling rule, called top-two Thompson sampling, or in short TTTS which is proposed by Daniel in 2016. \n\nHere by Bayesian I mean that we will make use of a prior distribution Pi_1 over a set of parameters $\\Theta$, which is assumed to contain the unknown true mean vector $\\mu$. And then upon acquiring a sequence of observations, we update our beliefs and obtain a posterior distribution $\\Pi_{n}$ which we assume to have a density $\\pi_n$ w.r.t. the Lebesgue measure using the Bayes' rule. And here L_{n-1} is simply the likelihood function.\n\nNow let me describe TTTS. So TTTS is a very simple sampling rule that is, as you may guess from its name, based on the famous Thompson sampling. Thompson sampling is an old and popular methods for regret minimisation, which simply plays an arm i with probability of this arm being optimal under a parameter drawn from the posterior distribution Pi_n. And on the pseudocode here, it is simply the line 3 and 4.\n\nAnd TTTS is a variant of TS that can be applied to BAI. Actually TS as it is cannot be directly used for BAI because it is known for its lack of exploration in the context of BAI, and one fix to that issue is proposed by Daniel that instead of playing always the arm with the largest sample, we add a re-sampling procedure, which is displayed from line 9 to 12 in this pseudocode. So we always keep the arm with the largest sample and we denote it by I1 and we call this arm the leader. But then we will re-sample from the posterior distributions until we find an arm I2 with the largest sample that is different from the first one. We call this arm the challenger. Then with probability \\beta, we play the leader, and with probability 1-\\beta, we play the challenger.","1bcd2298fc520e0ba52e52726852f2eb":"Why are we interested in TTTS? Well there are actually several strong points about it. First, beyond the aforementioned two frameworks fixed-budget and fixed-confidence, there is this so-called anytime BAI framework proposed by Jun and Nowak, that doesn't depend on the budget nor on the confidence level, which is indeed appealing for many real-world scenarios. And TTTS happens to be one algorithm that fulfils the situation.\n\nAnother point is that, for the more classic multi-armed bandit scenario, that is regret minimisation, Thompson sampling is well known for being a good competitor to the classic UCB algorithm, especially in practice. And it is thus interesting to ask if it is the same case for BAI that we can also have a strong Bayesian-flavoured competitor to the classic algorithms based on confidence intervals. Besides, TS doesn't need to calibrate confidence regions as done conservatively for other algorithms in theory that don't really work in practice.","28d76a8d8d3e6a60914d529e76ce5627":"What do we already know about TTTS. So here are some assumptions that are needed for the main theorem of Dan's paper that I will enter into detail. What we need to know is, under these assumptions, we can show that the optimal action probability of the optimal arm I* decays with an exponential rate that depends on some characteristic time T_\\beta^\\star that I will explain in detail right after. And the optimal action probability of some arm i is the probability of this arm being the optimal one under the posterior \\Pi_n.","7a4bd4694d87886080c25180a5897940":"And now, what is T_\\beta^\\star. First of all, we need to define a function C_i. So C_i is a function that specifies the effectiveness of distinguishing $\\mu_i$ from $\\mu_{I^\\star}$ using a sampling rule that attributes respectively $\\omega$ and $\\omega'$ proportion of samples to $I^\\star$ and $i$. Therefore, this function can be interpreted as a transportation cost from the original bandit model to a new bandit model for which the arm i has a larger mean than I^\\star.\n\nAnd T_\\beta^\\star can be viewed as the value of a game between two players where a learner first chooses a weight vector of arm pulls \\omega. A fictive adversary, let's say the nature, then chooses the worst configuration of arm means, that is hard to distinguish from the original model under the current weight vector \\omega, but under which the arm I^\\star is no longer optimal. There is a \\beta here because we fix the weight of the optimal arm I^\\star to \\beta.\n\nAnd to give you a more straightforward intuition, we have a closed form for C_i for Gaussian bandits as given here. However, it is worth noting that T_\\beta^\\star doesn't have a closed form in general.","1cd2cf83ac501daa1fe4a06ef13d7c6c":"However there are still many open questions \nthat we can study about TTTS. \n\nThe first thing is the current assumptions in the paper do not cover some standard conjugate priors, and in our AISTATS 20 paper we have extended the previous posterior convergence result to Gaussian bandits and Bernoulli bandits that I will not enter into detail today.\n\nBut I would rather put some words on the second question, which is in the fixed-confidence setting, what can we say about it's sample complexity when the risk level \\delta converges to zero. \nAnd finally, of course we also want to know if we can have finite-time guarantees for TTTS, but it seems to be much harder, and will not be covered in this thesis.","1729b9000aa01eb037e9d09383aa0edd":"The first theorem here is to answer to the first question that I have listed before. In our paper of AISTATS 20, we have extended the posterior convergence result of Dan's paper to Gaussian and Bernoulli bandits that are commonly used in practice.","a5206b66f8630fd4d01e84b691bf0a18":"I will now present some theoretical contributions as well as some new practical insights.","f9de72138260a61ce039c1066d1c4160":"For the theoretical part, we have shown the following theorem on the sample complexity. As I already mentioned before that we need three components: a sampling rule, here is TTTS; a stopping rule, we use the Chernoff stopping rule that I will define in the next slide; a decision rule which will output the empirical best arm. And we can show that these components form a \\delta-correct BAI strategy and moreover, the expected stopping time divided by log(1/\\delta) is bounded by T_\\beta^\\star. Note that we have a lower bound of the decay rate of the sample complexity that is characterised by T_\\beta^\\star. And indeed the sample complexity of TTTS matches this lower bound, thus we can call it asymptotically optimal, or more precisely beta-optimal here since we have a fixed beta.\n","83080b4fe873e453b55d191055327c5c":"Now, I would like to sketch the proof of this result. First we need to show that TTTS coupled with Chernoff stopping rule form a \\delta-correct strategy. Here is the Chernoff stopping rule, where W_n is what we call transportation cost from arm i to arm j. You may remember that previously we interpreted also a function C_i as a transportation cost. And these two quantities are indeed very similar, and C_i can be seen as the frequentist counterpart of the transportation cost W_n defined here.\n\nThe similarity is more clear if we look into the Gaussian case. And back to the definition of the stopping rule which is defined as the first time the largest minimal transportation cost between arms exceeds some threshold d_{n,\\delta}, which needs to be chosen very carefully. In our paper, we set it to be log(1/\\delta) plus log(log(n)).\n\nNote that in view of the Bayesian nature of the decision rule, which is the arm with the largest optimal action probability, it is natural to also use a Bayesian stopping rule for which we stop when the posterior probability that the output arm is optimal is large, and exceeds some threshold $c_{n,\\delta}$ which gets close to 1. But in theory, we can show that it is almost equivalent to the Chernoff stopping rule, and in practice, we don't really want to compute the optimal action probability at each round for all the arms, which is quite time-consuming.","4ab6c215a6f59a1e1d5929fbc38728f3":"And the second step is to prove a sufficient condition to achieve what we want. Indeed, if we can show that the expectation of T_\\beta^\\epsilon is finite for some sampling rule, where T is defined as the first time that the empirical number of pulls is close enough to the optimal weight vector, then the present sampling rule is \\beta-optimal. By \\beta-optimal, we mean that the expected sample complexity is asymptotically bounded by T_\\beta^\\star.","4f3aaf36d443bec536f52baef0504021":"And finally, it only remains to show that the expectation of T_\\beta^\\epsilon is indeed finite for TTTS. \n\n(This is actually the most complicated part of the analysis. I will not enter into details here, but just a few words on it, since this proof is inspired by a previous paper of Qin et al. on another variant of TTTS using expected improvement as sub-routine. But our proof is much more intricate since there are some randomised nature in the choice of the two candidate arms I^1 and I^2 in TTTS.)","ab503969625ad71e9b5219448dd8c7e8":"Ok, now we have some new theoretical understandings of TTTS. But while I was running experiments there is a curious observation that the algorithm is running for a very long time.\n\nBy thinking it over, we can guess that it is related to the re-sampling phase in TTTS from line 9 to 12 if you can remember. Indeed, sometimes, if the posterior of the optimal arm concentrates too well, then it would be very difficult to obtain a \\theta' where \\theta_{I^1} is not the best sample.","960324392b836296fa1d1a7ba3d7a7f5":"And we can have similar sample complexity results for our new algorithm.","083b9ace1ea79c4a4c151d02408d23f5":"To show that T3C indeed alleviates the computational burden, we used a very simple bandit model with four arms, and we reported the per step execution time in this table. We see that TTTS is almost 10 times more time-consuming than T3C. And T3C is not much worse than the uniform sampling.","a934019cdbfb32acd91b5078f6f72350":"We can see the performance of T3C in terms of sample complexity is also quite competitive. Here are some figures showing the performance of T3C against other sampling rules over several different Gaussian and Bernoulli bandit models. They are all using the same stopping rule to keep the comparison fair, except for UGapE for which we retained its original stopping rule. We can see that T3C is always among the best performing ones, and we also see that the stopping rule indeed plays a very crucial rule as UGapE performs quite badly.","38ff362298a2843880f6aa92d5189e1a":"And let me quickly describe what is exactly linear bandits for BAI. \n\nAssume now that we have a set of context vectors. And we have some unknown parameter \\theta such that the mean reward of arm i is a linear combination of x_i and \\theta. This is the so-called linear bandits. And a bandit model in this case is simply characterised by \\theta that we call regression parameter.\n\nWe still consider the fixed-confidence setting in this part.","5b94a7ede126564da2a7c023c06f12e8":"BAI for linear bandits under the fixed-confidence setting was first studied by Soare et al. in 2014, and led to a series of subsequent work. One open problem in those work was they were not asymptotically optimal as we have for vanilla BAI algorithms presented in the previous part.\n\nSo we would like to know if we can extend TTTS or T3C to the linear setting while keeping the asymptotic optimality. Or if not, what else can we do?","357f74f7f1892f5a6cc6a315f4ff46e8":"In this part, we still assume that we have a finite set of contexts.","d0c42886cbb5be398d6f9f3730267625":"A crucial step in linear bandits is to estimate the regression parameter theta. It is called regression parameter since we can estimate it using for example regularised least square estimation, where A_n is the design matrix, b_n is the response vector, and \\lambda is the regularisation parameter.\n\nRecall that the fixed-confidence optimality is related to the weight vector of arm pulls that we denote by ω. Given a weight vector ω, we can define a counterpart of the design matrix as given here. And it is easy switch between the design matrix and this weighted matrix big \\Lambda \\omega.","a251261b4d73af7c7e106cd67d992570":"Before we try to propose any new algorithms, we can first derive the sample complexity lower bound of linear bandits from the general lower bound that we have stated in the previous part. First, let's define a notion of alternative set, where for any arm x, its alternative is the set of parameters for which x is not the best arm. And based on this alternative set, we can particularise the inverse of the characteristic time T^\\star as given here. And we can even re-write it in a more precise way as given in the green part. Note that this characteristic time will be useful later on deriving optimal algorithms.","f96a576b0cf9759a220b5074cf22d26e":"Now let's first examine whether direct adaptation of TTTS and T3C can be asymptotic optimal.\n\nHere we can again define the transportation cost W_n, and it has an analytical expression as given here. The stopping rule and decision can also be naturally extended in the same way.","354fab210261f705abd20232ae5089db":"However, these adaptations can fail. To understand that, we run some simulations with the two sampling rules on a usual hard problem instance for linear bandits where we consider two perpendicular 2-dimensional arms x1 = (1, 0), x2 = (0, 1), and a disturbing arm x3 = (cos\\alpha, sin\\alpha). Both algorithms appear to be alternating between sampling x1 and the disturbing context x3 and take very long time before stopping. Note that in this instance, it would be more informative to play x2 a lot in order to discriminate between x1 and x3. To explain why this happens, we display in this figure here the confidence ellipsoid of the posterior after 10000 iterations of L-T3C as a blue dot region. We can see that the confidence region of the posterior is around the line x = 2, thus a vector sampled from the posterior will most of the time have a larger dot product with x1 and x3, and x2 will seldom be chosen as the leader or the challenger.","79a535141c0f34c86fa64f617721c93b":"To achieve asymptotic optimality, we may thus need to find some other way. Indeed, since the characteristic time involves many problem dependent quantities that are\nunknown to the learner, previous work target loose problem-independent upper bounds on the characteristic time, that we qualify as complexity of the problem. This could be the main reason that they don't achieve optimality, therefore one clue is to investigate those complexities. For example, one of the first complexities is inspired by optimal design that estimates uniformly the means of the arms, which coincides with the G-optimal design of experimental design theory. Another complexity is inspired by the transductive experimental design theory that estimates uniformly the means of the directions.\n\nA plausible guess to achieve optimality, however, would be the characteristic time itself, that is, estimate all the directions scaled by the squared gaps.","e8927bb24f4fa5b695a81d60c7299964":"And we show that those complexities can be ordered in the following way, where \\Delta_min is the smallest arm gap.","a98538e1a02cc35b708c57238e350be4":"Now, one way to design an asymptotically optimal algorithm is thus to deal with the characteristic time directly. Recall that, T^\\star can be viewed as the value of a zero-sum game. So we can propose an algorithm that produces a guess i_n for I^\\star(θ) at each time step. And the sampling rule implements a lower-bound game between a learner, playing at each stage n a weight vector ω_n in the probability simplex, and nature, who computes at each stage a response θ_n that belongs to the alternative set of i_n. The goal of the sampling rule is to ensure a ε-approximation of the saddle point of the lower-bound game. For that purpose, we can for example use AdaHedge for the learner, which is a regret-minimizing algorithm of the exponential family, and use best-response for the nature. The stopping rule remains the Chernoff stopping rule that is particularised into the linear case.\n\nThis algorithm is called LinGame. I'm not going to enter into the technical detail of this algorithm today since this is a collaboration with Remy and Pierre who did the main analysis in our ICML 2020 paper. But indeed, we can show that LinGame is asymptotically optimal. And I will show some experimental illustrations to ","aebba8194c9421a3ad66101468990fb2":"I will not enter into technical details of LinGame here, but just provide some experimental results to illustrate its performance. \n\nAgain like for the vanilla BAI, each bar represents the number of samples required for each algorithm over 100 runs.\n\nWe first benchmark our algorithm against previous algorithms on the aforementioned hard instance with different \\delta. LinGame is the second bin on each of the figures here, and we can see it is only slightly worse than last bin which represents LinGapE. LinGapE is an algorithm that works well in practice, but whether it is asymptotically optimal in theory remains unknown.","393948840e5d46c290ea28c9fcfaa3da":"Here are some more experiments with arms randomly generated from the unit sphere of different dimensions. Again, our algorithm Our algorithms consistently show strong performances compared to other algorithms apart from LinGapE.","26a1183d920ae64685e34217269ab065":"Now let's continue with more sophisticated search space, that is continuous search space. This is the so-called black-box optimisation or global optimisation, where at each time step we are query one point from the search space X, and observe a function value f(x) to which we can add some noise of course. And after a sequence of observations, we'll need to return a guess of the optimum. In this case, we have no gradient information. However since the search space is continue, it would be a mission impossible if we don't assume any smoothness assumption on the target function f. But we would like to have minimal assumptions in this part so that we can cover a larger class of functions. For example we will not have known Lipschitz constant on the regularity of f, and we will not have Bayesian Gaussian priors. So the question is, what kind of smoothness of f are we looking for.","3df483c7b93f9de50b8d60b027fa61c8":"Now in this part, I will be focusing on the infinitely-armed bandits, and show how we can take inspiration from previous parts to deal with hyper-parameter optimisation.","cbf6889acae1388b8d86dd778f5a2ee7":"In this presentation, we will restrict ourselves to supervised learning tasks. Which means we consider the problem as a black-box optimisation task where we want to minimise some unknown function f over some search space big Omega. Here, typically, an element lambda of the search space is a configuration/set of hyper-parameters of our target classifier.\n\nAnd the target function f is the expectation of some loss function that needs to be chosen depending on the scenario. Typically it could be cross-validation errors for example.","f01edf2e0ba140fac1b2bfada614479d":"Another idea is to employ some BAI machinery from the first part. However, since the search space could be infinite, or even continuous, it is natural to work with infinitely-armed bandits contrary to what we dealt with in the first part.\n\nTo be more clear, the setting of BAI in a stochastic infinitely-armed bandit is to consider a reservoir distribution of the arm means. At each stage, the learner can choose to either query a new arm from the reservoir, or she can just play an arm that has already queried before. Our goal is output an arm whose mean is close enough to the true best \\mu^\\star. Obviously we can never reach the true \\mu^\\star.","876750c20c7e1d5457811c1bdaf5c383":"Before we proceed, it is worth elaborating a bit more on the link between BAI and HPO. So in our setting, query a new arm from the reservoir \\nu_0 is equivalent to picking a new configuration \\lambda from the search space. Then in the scope of this work, sample or play an arm means to train the classifier into completion with the given configuration \\lambda. Finally, the reward will simply be some cross-validation loss in our experiments later on.","9675eb6a14939cd168a1ede661ced939":"The algorithm that we proposed is called DTTTS, which stands for dynamic TTTS. It is a dynamic algorithm built upon TTTS. I will explain right after what do I mean by dynamic.\n\nBefore that, compared to the first part of the talk, we will be more precise here. We assume a Beta-Bernoulli bandit model, and we assume a uniform prior over each new arm drawn from the reservoir.\n\nIf you can remember, this is the pseudocode for TTTS as in the first part, the only difference being that we have specified posterior distributions here which are Beta distributions. The idea of DTTTS is very simple. We start by one arm with uniform prior. And then at each stage of the algorithm, we query a new arm from the reservoir and add it to the dynamic arm pool. Be careful that we only draw an arm from the reservoir but we do not necessarily play it. And now we have two arms and we run one step of TTTS over these two arms and update posterior distributions accordingly. At the next step, we query another new arm and now we have 3 arms and run one step of TTTS over these three arms, and so on and so forth.\n\nSo in summary, at each stage of DTTTS, we add a new arm with a uniform prior to the arm pool without playing it, and run TTTS over the new set of arms.","c1010b7fac5f4ac6ed3bd53b345e74e5":"Now, you may notice that finally, at the end of the procedure, we will have n+1 arms, but most of them are only queried from the reservoir, but have never ever been effectively played. At the end, our belief over these arms are still a uniform distribution. That's where comes a nice implementation trick using the order statistic trick. Actually, if we have for example K uniform distributions, then we know that the distribution of the maximum of the K uniform distributions is indeed a Beta(K, 1) distribution. So we can rewrite our DTTTS algorithm using this trick by constructing a pseudo-arm. At each stage, if the newly queried arm is effectively played, then we just need to update our belief of it as usual, but if it is not played, then we can just update our belief over the pseudo-arm by adding 1 to the first shape parameter of the Beta distribution.\n\nHere is a simple figure composed of 4 real arms and the pseudo-arm to illustrate the idea. The dotted curve represents the pseudo-arm.","a9e45ec1a711851a37125e323e12ead1":"There are several reasons that we design such an algorithm. First of all, the sub-routine TTTS has a nice anytime property for finitely-armed bandits as we mentioned in the first part, that it does not depend on the budget or some risk level. Second, its Bayesian nature allows us to propose such a dynamic version in the infinite-armed case, which then leads to my third point, which is that all previous methods, no matter they are for infinite-armed bandits or hyper-parameter optimisation, they always require to fix some number of arms in advance. While our dynamic TTTS doesn't need this ad hoc setup, and thus naturally adapts to the difficulty of the task. \n\nTo give you some examples, for infinite-armed bandits algorithms like SiRI, it needs to choose a problem-dependent number of arms and then pull arms optimistically.\n\nAnd it is also the case for hyper-parameter optimisation algorithms like Hyperband, which is more or less the state-of-the-art method for HPO in an algorithmic point of view. Hyperband is also a bandit-based algorithm that divides the budget into several brackets. What we call a bracket here is composed of a fixed number of arms, and then in each bracket we just run a very simple fixed-budget BAI algorithm called sequential halving over the n arms. The main subtlety here is how we trade-off between the number of arms in each bracket and the number of computation sources that can be allocated to each arm. I will not go into detail here however.","7ba8656f1cce8d4ac3820e855b9afe7d":"Now let's illustrate DTTTS with some experiments. Here are two tables to show the hyper-parameters that we optimised over for our experiments. We will show results for 4 datasets in the next two slides. The first 3 are UCI datasets, we use the SVM as classifier and the fourth one is MNIST dataset, and we use MLP as the classifier.\n","bd0b99a33d64c39a45e00524202d51e4":"We can see that our algorithm DTTTS is quite competitive in all these four scenarios, although not always the best. But it's the most robust one here. Of course, these are only some rather toy examples, so we still need to test it on more and larger datasets.","8ce28b504bbb5aea5f89f4d8eed335a1":"But obviously we can also think of continuum-armed bandits. For continuum-armed bandits, a common type of methods is tree-based algorithms that recursively partition the search space into small sub-regions to approach the optimum. Part of my thesis is dedicated to this setting that I will not detail today. But roughly, we have proposed an algorithm that only requires minimal assumptions. However, those tree-based methods would suffer a lot when the dimension of the search space increases. A workaround is to propose algorithms that can be adaptive to the dimensions, which remains as an open research problem. ","b3cba4213ca9f09659bd1603744974b7":"Now, to define our smoothness, we will reuse the approach from Grill et al. 2015 where d is defined wrt a fixed and given partitioning P of the search space, so that we do not need to equip the search space with any explicit metric.","88c80f0275187c78fafeeecf4d88dd79":"A partitioning is simply a K-ary tree that is recursively defined over the search space. Here is a simple example of 3-ary tree where at each level each cell is divided into 3 equally-spaced sub-cells.","fe921d1d6310fa0f96f6e3e3ebfed6f5":"Using this partitioning, we can uniformly explore the target function f by evaluating points from different cells of different depth. The deeper we can, the more precise information we will get of f.","76ab10945e441cba7dc3d57e8438639b":"And our optimisation problem becomes actually a tree search on the partitioning, and the question is how can we explore the tree in a smart way so that we track x^\\star as deep as possible.","d1005acecf20c5114daeaec2710e8634":"Now let us discuss the smoothness assumption. We are interested in local smoothness as local smoothness naturally covers a larger class of functions than global smoothness, yet still assures that the function does not decrease too fast around the maximum. Here the local smoothness is given only around the global maximum where \\nu and \\rho are some smoothness parameters.","c74eb64136bd6766a2d6fe8346d7c628":"For that, we will introduce a notion of near-optimality dimension. The idea is to bound the quantity N_h(3\\nu\\rho^h), where N_h(\\epsilon) is the number of cells of depth h that has a local maximum that is at least \\epsilon far from the global maximum. Ideally we would like to bound this kind of cells as a function of depth h, where \\rho^(-d'h) controls how this quantity explodes with h when d' is positive, and N_h is simply bounded by the constant C when d' = 0. And we can define the near-optimality dimension wrt P as the infimum of d' such that N_h can be bounded by \\rho^(-d'h). Actually N_h (3νρh ) can be thought as the number of cells that any algorithm needs to sample in order to find the maximum. And intuitively the near-optimality dimension characterises the difficulty of the optimisation, a smaller d (ν, C, ρ) implies an easier optimisation problem.\n","ffc258980ec907f3584776b1ca291578":"Before I get into our algorithm, here I show a table of smoothness in previous work. They all assume global or local smoothness that can known or unknown. But most of them assume the knowledge of an explicit metric. We don't need this in this part. This setting has been first tackled by the algorithm of POO from Grill et al., 2015. POO is a meta-algorithm which can be used on top of any tree-based algorithm that knows the smoothness, that we call a subroutine or base algorithm. POO requires that the base algorithm has bounded cumulative regret, we further propose in this part an algorithm GPO that only requires the base algorithm has bounded simple regret.","d69ce19638e142c1990783ec60b2ab95":"So GPO stands for general parallel optimisation. And the idea is to reuse POO but with a cross-validation scheme. In POO, several instances of A are run in parallel, each one using a different pair of parameters (ν, ρ) in a well-chosen grid. In the end, POO(A) chooses the instance that has the largest empirical mean reward and returns one of the points evaluated by this instance, chosen uniformly at random. For GPO, we divide the budget into two halves. The first half is used to evaluate the function on different parameter instances as POO did, and each would recommend a point at the end. Then the other half of budget would be dedicated to further estimating the function values at those points, and the one with the highest estimated value is kept.","42e1a1e79b6102f9a1f24a5b1df56ec9":"So the main result of this algorithm is that for any base algorithm that have a simple regret bounded by (log/n)^(1/(d+2)), GPO run over this base algorithm can have a similar simple regret up to a log(n) factor.","51afba7af61af4850319c6082c4ed223":"A last question is whether there exists a base algorithm that has simple regret guarantee.","8064f54fb8ce2367eabb60e017cb0847":"Now let's extend the setting a bit and let's consider the linear setting. \n\nActually, there are several reasons that can motivate our interest in the linear setting: first of all, in some real applications like ad placements we can have some side information. Linear bandits or more generally contextual bandits can better incorporate those information. \n\nOn the other hand, if we are interested in RL, RL extends upon contextual bandits by allowing for long-term consequences. More precisely, for contextual (linear) bandits, the actions only affect the current reward, whereas for RL, they can also affect the future rewards through the evolution of the context. And given the fact that vanilla TS is very flexible and can be adapted to linear bandits, RL, we would like also to understand whether TTTS could also be applied to BAI in linear bandits, which could be a first step toward RL in the future.","6351fd2871e1ea08dfb127190f778ba8":"Thank you for the introduction and thanks to everyone for being here. Today I am going to present my thesis entitled adaptive methods for optimisation in stochastic environments. This thesis is done in the SequeL team of Inria Lille, and is supervised by Emilie Kaufmann and Michal Valko.","331babff1eaf4ac12c0a4983ccb4e1a4":"Now let's go back to our initial motivation of HPO, and we will need to study infinite or even continuous search spaces. And this will be the focus of this second part. Note that we will not have access to gradient information, and we consider pure black-box optimisation in this  part. Actually, in many classic machine learning models, we do not have access to gradient information as we do in deep learning models.","0f327faf81c5803327747fb93ed9b655":"Obviously, optimisation in an infinite or continuous search space could be tricky, since without any further assumptions, we cannot do anything. In the literature, there are two common ways to tackle the problem.\n\nThe first one is the continuum-armed bandits setting, or sometimes also named as X -armed bandits. It considers arms that lie in some metric space and their mean rewards form a deterministic or stochastic function with some global or local smoothness being assumed. In this case, the target function f can exhibit some structure.\n\nThe second one is initiated by Berry et al. [1997], where a specific case of Bernoulli bandits is treated. In their paper, Berry et al. regard the Bernoulli parameters as independent observations from a probability distribution, that we call a reservoir. This setting has been studied both in the regret minimisation setting and optimisation setting.\n\nAnd in this part, I will mainly focus on the second setting, and show how we can take inspiration from the first part, that is Thompson sampling-based algorithm to deal with HPO.","2f2b50ae8f321f05e41cb892613b601c":"Finally, some experiments on the performance of TTTS/T3C in terms of sample complexities. Each bar here in the figure shows the sample complexity of one algorithm run over a simple bandit model for for 10000 times. The black dots represent the average number of samples required by each algorithm before stopping. And we run experiments on both Bernoulli and Gaussian bandits.","3bf5bb3594998746ead02cb585f9c893":"Here are the results. We benchmark our DTTTS against Hyperband, random search and also a Bayesian optimisation method called TPE. Bayesian optimisation methods were state-of-the art algorithms before Hyperband, that's why we include one of them here.\n\nAnd here on the plots, we are showing evolution of the cross-validation loss of the incumbent best configuration. And the faster the curve decays, the better it would be.","228a2639b79b35c4ce288f399a93be9f":"That's why we also proposed a variant to get rid of this un-desired computational burden. The idea is to simply replace the re-sampling phase using the transportation cost that we introduced. The intuition is that we replace sampling from the posterior distribution by an approximation of its mode which is roughly exponential of -W_n. And this is rather easy to compute in practice. And this new sampling rule is called top-two transportation cost, in short T3C.","901898ee60f3c9ce487a07ac48bf6b4b":"So remember that we have this beta parameter in the algorithms. In our experiments, it is set to be 1/2, but a potential improvement would be to propose a mechanism that can approximate the optimal beta^\\star on the fly."}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.js"></script>
+		<script src="lib/reveal-plugins.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+				
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: false,
+				fragmentInURL: true,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+				navigationMode: "default",
+
+				transition: "default",
+				backgroundTransition: "slide",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight ]
+			});
+		</script>
+
+		
+
+	</body>
+</html>
